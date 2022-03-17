@@ -4,11 +4,13 @@ import './Footer.scss';
 export const Footer = (props) => {
     return (
         <div className='footer'>
-            <div className='footer__btns'>
+            <div className='footer__inner'>
+                <div className='footer__btns'>
 
-            </div>
-            <div className='footer__content'>
-                { props.children }
+                </div>
+                <div className='footer__content'>
+                    { props.children }
+                </div>
             </div>
         </div>
     );

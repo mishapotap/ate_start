@@ -6,27 +6,31 @@ import Layout from './components/Layout';
 import * as routes from './const/routes';
 
 import {Home} from './screens/Home';
+import { Map } from './screens/Map';
 
 // const withLayout = (Component) => (props) => <Layout><Component {...props} /></Layout>
 
 function App({location, ...props}) {
     return (
         <Router>
-            <Layout>
-                <TransitionGroup style = {{height: '100%'}}>
-                    <CSSTransition
-                        classNames = 'routefade'
-                        timeout = { 500 }>
-                        <Routes location = { location }>
-                            <Route
-                                exact
-                                element={<Home />}
-                                path = { routes.HOME }
-                            />
-                        </Routes>
-                    </CSSTransition>
-                </TransitionGroup>
-            </Layout>
+            <TransitionGroup style = {{height: '100%'}}>
+                <CSSTransition
+                    classNames = 'routefade'
+                    timeout = { 500 }>
+                    <Routes location = { location }>
+                        <Route
+                            exact
+                            element={<Home />}
+                            path = { routes.HOME }
+                        />
+                        <Route
+                            exact
+                            element={<Map />}
+                            path = { routes.MAP }
+                        />
+                    </Routes>
+                </CSSTransition>
+            </TransitionGroup>
         </Router>
     );
 }

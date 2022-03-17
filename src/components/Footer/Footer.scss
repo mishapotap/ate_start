@@ -3,10 +3,13 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
+}
+.footer__inner {
     display: flex;
     height: 160px;
-    z-index: 10;
     padding: 0 50px;
+    align-items: flex-start;
 }
 .footer__btns {
     flex: 0 0 129px;
@@ -22,7 +25,7 @@
 .footer__right {
     flex: 0 0 50%;
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .footer__btn-structure {

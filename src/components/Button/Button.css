@@ -7,39 +7,48 @@
   transition: .3s;
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 0.13em; }
-  .button.size_xs {
-    height: 32px;
-    padding: 4px 10px;
-    font-size: 13px; }
-  .button.size_s {
-    height: 40px;
-    padding: 10px; }
-  .button.size_m {
-    min-height: 65px;
-    padding: 22px;
-    font-weight: 700;
-    font-size: 11px; }
-  .button.theme_black {
-    border: 1px solid #000;
-    color: #000;
-    background: transparent; }
-    .button.theme_black:hover {
-      background: #2D74AD;
-      border-color: #2D74AD;
-      color: #ffffff; }
-    .button.theme_black:active {
-      background: #1A588B;
-      border-color: #1A588B;
-      color: #ffffff; }
-  .button.disabled {
-    color: #A7A7A7;
-    border-color: #A7A7A7;
-    outline: none;
-    box-shadow: none !important;
-    border: 0; }
-  .button:focus {
-    outline: none; }
+  letter-spacing: 0.13em;
+  text-decoration: none; }
+
+.button.size_xs {
+  height: 32px;
+  padding: 4px 10px;
+  font-size: 13px; }
+
+.button.size_s {
+  height: 40px;
+  padding: 10px; }
+
+.button.size_m {
+  min-height: 65px;
+  padding: 22px;
+  font-weight: 700;
+  font-size: 11px; }
+
+.button.theme_black {
+  border: 1px solid #000;
+  color: #000;
+  background: transparent; }
+
+.button.theme_black:hover {
+  background: #2D74AD;
+  border-color: #2D74AD;
+  color: #ffffff; }
+
+.button.theme_black:active {
+  background: #1A588B;
+  border-color: #1A588B;
+  color: #ffffff; }
+
+.button.disabled {
+  color: #A7A7A7;
+  border-color: #A7A7A7;
+  outline: none;
+  box-shadow: none !important;
+  border: 0; }
+
+.button:focus {
+  outline: none; }
 
 .preloader {
   position: absolute;

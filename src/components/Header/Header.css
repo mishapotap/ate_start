@@ -3,7 +3,9 @@
   align-items: center;
   height: 88px;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  border-bottom: 1px solid #DBDBDB;
+  background: #ffffff; }
 
 .header__logo {
   flex: 0 0 179px;
