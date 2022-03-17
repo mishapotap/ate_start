@@ -1,0 +1,165 @@
+@keyframes sizeFlicker275 {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(2.75); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes opacity-1-05 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity-1-075 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+
+@keyframes width-075 {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(0.75, 1); }
+  100% {
+    transform: scale(1, 1); } }
+
+@keyframes width-09 {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(0.9, 1); }
+  100% {
+    transform: scale(1, 1); } }
+
+@keyframes width-09-2 {
+  0% {
+    transform: scale(1, 1); }
+  25% {
+    transform: scale(0.9, 1); }
+  50% {
+    transform: scale(1, 1); }
+  100% {
+    transform: scale(1, 1); } }
+
+@keyframes width-115 {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.15, 1); }
+  100% {
+    transform: scale(1, 1); } }
+
+@keyframes width-125 {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.25, 1); }
+  100% {
+    transform: scale(1, 1); } }
+
+.font-style-normal {
+  font-style: normal !important; }
+
+.font-style-italic {
+  font-style: italic !important; }
+
+.font-weight-normal {
+  font-weight: normal !important; }
+
+.font-weight-medium {
+  font-weight: 500 !important; }
+
+.font-weight-bold {
+  font-weight: bold !important; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./assets/fonts/Roboto-Regular.woff") format("woff"), url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./assets/fonts/Roboto-Light.woff") format("woff"), url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./assets/fonts/Roboto-Bold.woff") format("woff"), url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: 'Roboto', 'sans-serif';
+  color: #000000;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  margin: 0; }
+  body:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    transition: background-color .2s, transform .8s ease;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -10; }
+  body._frozen {
+    overflow: hidden; }
+
+#root {
+  height: 100%;
+  min-height: 100%; }
+  #root > div {
+    display: flex;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column; }
+
+ul {
+  margin: 1em 0;
+  padding: 0; }
+  ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: .5em; }
+    ul li:before {
+      content: '';
+      position: absolute;
+      top: .4em;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px 1px #219653; }
+
+h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+  line-height: 1.4em; }
+
+h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 1em 0 .5em; }

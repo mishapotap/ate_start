@@ -1,0 +1,23 @@
+@import "../../assets/scss/utils/grid.scss";
+@import "../../assets/scss/base/colors.scss";
+
+.video {
+  // width: 75%;
+  // max-width: 1440px;
+  margin: 0 auto;
+  // position: relative;
+}
+
+.vimeo-player {
+	position: relative;
+	z-index: 0;
+	width: 100%; height: 100%;
+}
+.vimeo-player-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}

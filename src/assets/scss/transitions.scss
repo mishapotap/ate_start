@@ -1,0 +1,48 @@
+$easing: cubic-bezier(0.23, 1, 0.32, 1);
+$delay: 0.32s $easing;
+$ease: 0.3s ease;
+
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
+
+.routefade-enter {
+  opacity: 0.01;
+}
+.routefade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.routefade-exit {
+  opacity: 1;
+}
+.routefade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
+.no-fade .routefade-enter {
+	opacity: 1;
+}
+.no-fade .routefade-exit {
+	opacity: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

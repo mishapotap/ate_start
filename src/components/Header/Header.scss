@@ -1,0 +1,60 @@
+@import '../../assets/scss/base/colors';
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 88px;
+    position: relative;
+    z-index: 10;
+}
+
+.header__logo {
+    flex: 0 0 179px;
+    padding-left: 50px;
+
+    & > img {
+        width: 129px;
+    }
+}
+
+.header__middle {
+    flex: 1 1 100%;
+    padding-left: 178px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.header__menu {
+    flex: 0 0 321px;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    align-items: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    background: $primary;
+    color: $white;
+    transition: .3s;
+
+    &:hover {
+        background: #2D74AD;
+    }
+
+    &:active {
+        background: #1A588B;
+    }
+
+    & > svg {
+        margin-left: 30px;
+    }
+}

@@ -1,0 +1,137 @@
+$screen-size-xxs: 480px;
+$screen-size-xs: 640px;
+$screen-size-sm: 768px;
+$screen-size-md: 992px;
+$screen-size-lg: 1280px;
+$screen-size-xl: 1440px;
+$screen-size-xxl: 1600px;
+
+// min values
+$screen-size-xxs-min: $screen-size-xxs;
+$screen-size-xs-min: $screen-size-xs;
+$screen-size-sm-min: $screen-size-sm;
+$screen-size-md-min: $screen-size-md;
+$screen-size-lg-min: $screen-size-lg;
+$screen-size-xl-min: $screen-size-xl;
+$screen-size-xxl-min: $screen-size-xxl;
+
+// max values
+$screen-size-xxs-max: $screen-size-xxs-min - 1px;
+$screen-size-xs-max: $screen-size-sm-min - 1px;
+$screen-size-sm-max: $screen-size-md-min - 1px;
+$screen-size-md-max: $screen-size-lg-min - 1px;
+$screen-size-lg-max: $screen-size-xl-min - 1px;
+$screen-size-xl-max: $screen-size-xxl-min - 1px;
+
+@mixin above($media) {
+	@media (min-width: $media) { @content }
+}
+
+@mixin between($media, $media1) {
+	@media (min-width: $media) and (max-width: $media1) { @content };
+}
+
+@mixin below($media) {
+	@media (max-width: $media) { @content };
+}
+
+@mixin below-xxs() {
+	@include below($screen-size-xxs-min) { @content };
+}
+
+@mixin below-xs() {
+	@include below($screen-size-xs-min) { @content };
+}
+
+@mixin below-sm() {
+	@include below($screen-size-sm-min) { @content };
+}
+
+@mixin below-md() {
+	@include below($screen-size-md-min) { @content };
+}
+
+@mixin below-lg() {
+	@include below($screen-size-lg-min) { @content };
+}
+
+@mixin below-xl() {
+	@include below($screen-size-xl-min) { @content };
+}
+
+@mixin below-xxl() {
+	@include below($screen-size-xxl-min) { @content };
+}
+
+@mixin above-xs() {
+	@include above($screen-size-xs-min) { @content };
+}
+
+@mixin above-sm() {
+	@include above($screen-size-sm-min) { @content };
+}
+
+@mixin above-md() {
+	@include above($screen-size-md-min) { @content };
+}
+
+@mixin above-lg() {
+	@include above($screen-size-lg-min) { @content };
+}
+
+@mixin above-xl() {
+	@include above($screen-size-xl-min) { @content };
+}
+
+@mixin above-xxl() {
+	@include above($screen-size-xxl-min) { @content };
+}
+
+@mixin xxl() {
+	@include below-xxl() { @content };
+}
+
+@mixin xl() {
+	@include below-xl() { @content };
+}
+
+@mixin lg() {
+	@include below-lg() { @content };
+}
+
+@mixin md() {
+	@include below-md() { @content };
+}
+
+@mixin sm() {
+	@include below-sm() { @content };
+}
+
+@mixin xs() {
+	@include below-xs() { @content };
+}
+
+@mixin xxs() {
+	@include below-xxs() { @content };
+}
+
+$header-height: 144px;
+$header-height-xl: 110px;
+$header-height-md: 68px;
+$header-height-mob: 80px;
+$footer-height: 180px;
+$footer-height-xl: 110px;
+$footer-height-md: 90px;
+$footer-height-mob: 66px;
+
+$page-p: 60px;
+$page-p-xxl: 50px;
+$page-p-tab: 45px;
+$page-p-mob: 25px;
+
+$content-p: 168px;
+$content-p-desk: 96px;
+$content-p-tab: $page-p-tab;
+$content-p-mob: $page-p-mob;
+
+$mobile-menu-width: 300px;

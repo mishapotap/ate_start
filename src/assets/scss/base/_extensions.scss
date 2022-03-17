@@ -1,0 +1,131 @@
+%position-absolute-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+%position-absolute-centered {
+  margin: auto;
+
+  @extend %position-absolute-full;
+}
+
+%display-flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//
+%animation {
+  &__rotate {
+    &-right-1 {
+      animation: 50s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
+    }
+
+    &-right-2 {
+      animation: 125s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
+    }
+
+    &-right-3 {
+      animation: 175s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
+    }
+
+    &-right-4 {
+      animation: 250s linear 0.15s infinite rotate, 1s opacity-1-075 0.15s infinite ease-in;
+    }
+
+    &-left-1 {
+      animation: 50s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
+    }
+
+    &-left-2 {
+      animation: 125s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
+    }
+
+    &-left-3 {
+      animation: 175s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
+    }
+
+    &-left-4 {
+      animation: 250s linear 0.15s infinite reverse rotate, 1s opacity-1-075 0.15s infinite ease-in;
+    }
+  }
+
+  &__size {
+    &-1 {
+      animation: 1s sizeFlicker275 0.15s infinite linear;
+    }
+
+    &-2 {
+      animation: 3s sizeFlicker275 0.15s infinite linear;
+    }
+
+    &-3 {
+      animation: 5s sizeFlicker275 0.15s infinite linear;
+    }
+  }
+
+  &__opacity {
+    &__1-05 {
+      &__1 {
+        animation: 1s opacity-1-05 0.15s infinite linear;
+      }
+
+      &__2 {
+        animation: 2s opacity-1-05 0.15s infinite linear;
+      }
+
+      &__3 {
+        animation: 3s opacity-1-05 0.15s infinite linear;
+      }
+    }
+
+    &__1-075 {
+      &__1 {
+        animation: 1s opacity-1-075 0.15s infinite linear;
+      }
+
+      &__2 {
+        animation: 2s opacity-1-075 0.15s infinite linear;
+      }
+
+      &__3 {
+        animation: 3s opacity-1-075 0.15s infinite linear;
+      }
+    }
+  }
+}
+
+%btn-flare {
+  .btn__icon {
+    overflow: hidden;
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      background-color: #fff;
+      width: 0.15em;
+      min-width: 20px;
+      height: 200%;
+      position: absolute;
+      top: -70%;
+      bottom: 0;
+      left: -50%;
+      transform: rotateZ(45deg);
+      opacity: 0.25;
+    }
+  }
+
+  &:hover {
+    .btn__icon {
+      &:before {
+        transform: translate3d(0, 0, 0);
+        transition: all 0.3s ease;
+        left: 150%;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.fade-enter {
+  opacity: 0.01; }
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.fade-exit {
+  opacity: 1; }
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in; }
+
+.routefade-enter {
+  opacity: 0.01; }
+
+.routefade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.routefade-exit {
+  opacity: 1; }
+
+.routefade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in; }
+
+.no-fade .routefade-enter {
+  opacity: 1; }
+
+.no-fade .routefade-exit {
+  opacity: 0; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.volume-swiper {
+  z-index: 2000;
+  cursor: pointer; }

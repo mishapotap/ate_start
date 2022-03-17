@@ -1,0 +1,14 @@
+._nowrap {
+	white-space: nowrap;
+}
+._underline {
+	text-decoration: underline;
+}
+
+._bg-inherit {
+	background: inherit;
+	._isEdge & {
+		background: none transparent;
+	}
+}
+

@@ -1,0 +1,174 @@
+@import "../../assets/scss/utils/grid.scss";
+@import "../../assets/scss/base/colors.scss";
+
+.video__progressbar {
+  position: absolute;
+  bottom: 67px;
+  z-index: 20;
+	left: 0;
+	right: 0;
+	margin: auto;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  // padding-left: 115px;
+  // padding-right: 115px;
+  @include xxl {
+  	padding: 0 50px;
+  }
+}
+.video-progress {
+	height: 7px;
+	border-radius: 7px;
+	z-index: 4;
+	position: relative;
+	flex: 1 1 90%;
+	// display: flex;
+	// justify-content: center;
+	cursor: pointer;
+
+	@include xl {
+		& {
+		}
+	}
+	@include sm {
+		& {
+			height: 12px;
+		}
+	}
+	@include xs {
+		& {
+		}
+	}
+
+	& .rangeslider {
+		margin: 0;
+		background-color: transparent;
+		box-shadow: none;
+	}
+	& .rangeslider-horizontal {
+		height: 8px;
+		background: #C4C4C4;
+		border-radius: 2.5px;
+		position: relative;
+		@include sm {
+			height: 12px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			bottom: -20px;
+			left: 0;
+			right: 0;
+		}
+	}
+	& .rangeslider-horizontal .rangeslider__fill {
+		border-radius: 2.5px;
+		background-color: $white;
+		box-shadow: none;
+		transition: width .3s linear;
+		will-change: width;
+	}
+	& .rangeslider-horizontal .rangeslider__handle {
+		// display: none !important;
+		// opacity: 0;
+		width: 0;
+		height: 0;
+		border: 0;
+		overflow: visible;
+		transition: left .3s linear;
+		&:after {
+			width: 24px !important;
+			height: 24px !important;
+			top: 0;
+			left: 0;
+			transform: translate(-50%, -50%);
+			background-color: $white;
+			box-shadow: none;
+			transition: all ease-in-out .3s;
+		}
+
+		&:hover {
+			&:after {
+				width: 30px !important;
+				height: 30px !important;
+			}
+		}
+	}
+	& .rangeslider__handle-label {
+		display: none;
+	}
+	& .rangeslider__labels {
+		display: none !important;
+	}
+
+	&__counter {
+		position: absolute;
+		right: -90px;
+		color: #F2F2F2;
+		top: -3px;
+		font-size: 12px;
+		white-space: nowrap;
+		@include xl {
+		}
+		@include sm {
+			font-size: 10px;
+		}
+		@include xs {
+		}
+
+		& > i {
+			font-style: normal;
+			color: #F2F2F2;
+		}
+	}
+
+}
+
+.pause-btn {
+	margin-right: 60px;
+	height: 35px;
+	width: 26px;
+	min-width: 26px;
+	position: relative;
+	cursor: pointer;
+	& svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__play {
+		display: none;
+	}
+	&_paused &__play {
+		display: block;
+	}
+	&_paused &__pause {
+		display: none;
+	}
+}
+
+.btn-place {
+	transition: .4s opacity ease-in-out;
+}
+.vp_hidden .btn-place {
+	opacity: 0;
+}
+.vp_hidden .progress-place {
+	opacity: 0;
+}
+.progress-place {
+	//flex: 1 1 80%;
+	flex: 0 0 70%;
+	transition: .4s opacity ease-in-out;
+}
+// .vp_hidden .control-btn-place {
+// 	opacity: 0;
+// }
+.control-btn-place {
+	padding-left: 158px;
+}

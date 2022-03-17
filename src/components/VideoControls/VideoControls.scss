@@ -1,0 +1,21 @@
+@import "../../assets/scss/utils/grid.scss";
+@import "../../assets/scss/base/colors.scss";
+.video-controls {
+	// position: absolute;
+	display: none;
+	// z-index: 4;
+	transition: transform .5s ease-in-out;
+	// height: 100px;
+}
+
+@keyframes sound {
+	0% {
+		height: 27px;
+	}
+	50% {
+		height: 8px;
+	}
+	100% {
+		height: 27px;
+	}
+}

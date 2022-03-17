@@ -1,0 +1,29 @@
+.volume {
+  display: flex;
+  align-items: center;
+  padding-left: 180px; }
+  .volume__btn {
+    margin-right: 12px;
+    cursor: pointer; }
+  .volume__icon .icon-volume__wave {
+    opacity: 0; }
+  .volume__btn_on .volume__icon .icon-volume__wave {
+    opacity: 1; }
+  .volume__line {
+    width: 170px;
+    height: 6.71px;
+    background: #C4C4C4;
+    border-radius: 2.5px;
+    position: relative; }
+    .volume__line:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      bottom: -20px;
+      left: 0;
+      right: 0; }
+  .volume__fill {
+    height: 100%;
+    width: 50%;
+    background: #ffffff;
+    border-radius: 2.5px; }

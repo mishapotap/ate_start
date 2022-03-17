@@ -1,0 +1,26 @@
+// Common
+$border-radius-normal: 12px;
+$border-radius-circle: 50%;
+
+// Preloader
+$preloader-size: 591px;
+$preloader-color: #ffffff;
+
+// Z-index
+$z-index-root: 10;
+$z-index-hud: $z-index-root;
+$z-index-bg: $z-index-hud + 5;
+$z-index-video: $z-index-bg + 5;
+$z-index-decor-y: $z-index-video + 5;
+$z-index-layout-root: $z-index-decor-y + 5;
+$z-index-layout-top: $z-index-layout-root + 5;
+$z-index-control-1: $z-index-layout-top + 5;
+
+$z-index-popup: 1000;
+
+// Animation durations
+$duration-slow: 2s;
+$duration-slower: 3s;
+$duration-fast: 800ms;
+$duration-faster: 500ms;
+$duration-most-faster: 150ms;
