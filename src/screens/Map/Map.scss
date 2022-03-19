@@ -17,6 +17,7 @@
 .map__step {
     position: absolute;
     top: 0;
+    display: block;
 }
 .map__point {
     width: 8px;
@@ -26,10 +27,14 @@
     background: #fff;
     position: relative;
     top: -9px;
+    transition: .3s;
 
     &_final {
         background: #263973;
     }
+}
+.map__step:hover .map__point {
+    background: #263973;
 }
 .map__step-name {
     font-weight: 700;
@@ -50,6 +55,7 @@
     color: #A7A7A7;
     max-width: 200px;
     margin-top: -8px;
+    transition: .3s;
 
     &_bottom {
         padding-top: 90px;
@@ -67,6 +73,9 @@
         color: #263973;
         padding-top: 12px;
     }
+}
+.map__step:hover .map__step-desc {
+    color: #263973;
 }
 
 .map__stage {
@@ -123,4 +132,5 @@
     text-transform: uppercase;
     color: #000;
     padding: 10px 30px;
+    cursor: pointer;
 }

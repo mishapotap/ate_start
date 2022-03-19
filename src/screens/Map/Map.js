@@ -1,13 +1,19 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
 import Layout from '../../components/Layout';
+import { Modal } from '../../components/Modal/Modal';
 import * as routes from '../../const/routes';
 
 import './Map.scss'
 
 export const Map = () => {
+    const [isS1ModalOpened, setIsS1ModalOpened] = useState(false);
+    const [isS2ModalOpened, setIsS2ModalOpened] = useState(false);
+    const [isS3ModalOpened, setIsS3ModalOpened] = useState(false);
+    const [isS4ModalOpened, setIsS4ModalOpened] = useState(false);
+
     return (
         <Layout>
             <div className='map'>
@@ -15,24 +21,24 @@ export const Map = () => {
                 <div className='map__stagetitles'>
                     <div className='map__stagetitle'>
                         <div>Предпусковые наладочные работы</div>
-                        <Link to={routes.HOME} className='stage-button'>подробнее</Link>
+                        <span className='stage-button' onClick={() => {setIsS1ModalOpened(true)}}>подробнее</span>
                     </div>
                     <div className='map__stagetitle' style={{left: '46.2%'}}>
                         <div>Физпуск</div>
-                        <Link to={routes.HOME} className='stage-button'>подробнее</Link>
+                        <span className='stage-button' onClick={() => {setIsS2ModalOpened(true)}}>подробнее</span>
                     </div>
                     <div className='map__stagetitle' style={{left: '67.2%'}}>
                         <div>Энергопуск</div>
-                        <Link to={routes.HOME} className='stage-button'>подробнее</Link>
+                        <span className='stage-button' onClick={() => {setIsS3ModalOpened(true)}}>подробнее</span>
                     </div>
                     <div className='map__stagetitle' style={{left: '80.2%'}}>
                         <div>Опытно-промышленная эксплуатация</div>
-                        <Link to={routes.HOME} className='stage-button'>подробнее</Link>
+                        <span className='stage-button' onClick={() => {setIsS4ModalOpened(true)}}>подробнее</span>
                     </div>
                 </div>
                 <div className='map__line'>
                     <div className='map__stage' style={{left: '-18px'}}>Этап <b>А</b></div>
-                    <div className='map__step' style={{}}>
+                    <Link to={routes.A0} className='map__step' style={{}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>A0</div>
                         <div className='map__step-desc'>
@@ -41,7 +47,7 @@ export const Map = () => {
                                 Передача из монтажа в ПНР первой системы или оборудования блока
                             </div>
                         </div>
-                    </div>
+                    </Link>
                     <div className='map__step' style={{left: '9.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>A1</div>
@@ -117,16 +123,30 @@ export const Map = () => {
                     </div>
                 </div>
             </div>
-            <Footer>
-                <div className='footer__left'></div>
-                <div className='footer__right'>
-                    <div className='footer__btn-structure'>
-                        <Button size={ButtonSize.m}>Положение АТЭ в структуре АЭС</Button>
+
+            <Modal isOpened={isS1ModalOpened} onClose={() => {setIsS1ModalOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'>Этап <span>А</span> </div>
+                    <h3>ПРЕДПУСКОВЫЕ НАЛАДОЧНЫЕ РАБОТЫ</h3>
+                    <div class='text'>
+                        Этап ввода в эксплуатацию энергоблока АЭС, при котором законченные 
+                        строительством и монтажом системы и элементы блока АЭС приводятся 
+                        в состояние эксплуатационной готовности с проверкой их соответствия 
+                        установленным в проекте критериям и характеристикам и которым завершается 
+                        готовность блока АЭС к физическому пуску реактора (разделён на 4 подэтапа).
                     </div>
-                    <div className='footer__btn-steps'>
-                        <Link to={routes.MAP}>
-                            <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
-                        </Link>
+                </div>
+            </Modal>
+
+            <Footer>
+                <div className='footer__btns'></div>
+                <div className='footer__content'>
+                    <div className='footer__left'>
+                        <div className='footer__btn-steps'>
+                            <Link to={routes.MAP}>
+                                <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </Footer>

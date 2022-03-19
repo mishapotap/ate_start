@@ -12,17 +12,21 @@
   left: 50%;
   top: 43%;
   transform: translate(-50%, -50%); }
-  @media (max-width: 1600px) {
-    .throbber {
-      width: 150px;
-      height: 150px; } }
-  .throbber_video {
-    top: 43%; }
-  .throbber svg {
-    opacity: .6;
-    fill: #ffffff;
-    width: 100%;
-    height: 100%; }
-  ._loaded .throbber {
-    opacity: 0;
-    z-index: -1; }
+
+@media (max-width: 1600px) {
+  .throbber {
+    width: 150px;
+    height: 150px; } }
+
+.throbber_video {
+  top: 43%; }
+
+.throbber svg {
+  opacity: .6;
+  fill: #ffffff;
+  width: 100%;
+  height: 100%; }
+
+._loaded .throbber {
+  opacity: 0;
+  z-index: -1; }

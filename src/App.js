@@ -7,6 +7,7 @@ import * as routes from './const/routes';
 
 import {Home} from './screens/Home';
 import { Map } from './screens/Map';
+import { A0 } from './screens/steps/A0';
 
 // const withLayout = (Component) => (props) => <Layout><Component {...props} /></Layout>
 
@@ -27,6 +28,11 @@ function App({location, ...props}) {
                             exact
                             element={<Map />}
                             path = { routes.MAP }
+                        />
+                        <Route
+                            exact
+                            element={<A0 />}
+                            path = { routes.A0 }
                         />
                     </Routes>
                 </CSSTransition>
