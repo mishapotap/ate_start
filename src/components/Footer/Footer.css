@@ -24,7 +24,8 @@
 .footer__right {
   flex: 0 0 50%;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  align-items: center; }
 
 .footer__btn-structure {
   max-width: 324px; }
@@ -32,3 +33,33 @@
 .footer__btn-steps {
   max-width: 424px;
   margin-left: -1px; }
+
+.footer__pagebuttons {
+  display: flex;
+  align-items: center; }
+
+.footer__pagebutton {
+  width: 65px; }
+
+.footer__pagebutton._next {
+  margin-left: -1px; }
+
+.footer__pagebutton._prev > button > svg {
+  transform: rotate(180deg); }
+
+.footer__links {
+  padding-right: 60px; }
+
+.footer__title {
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: 0.17em;
+  color: #767676;
+  margin-bottom: 27px; }
+
+.footer__title > b {
+  color: #263973;
+  display: inline-block;
+  margin-left: 40px; }

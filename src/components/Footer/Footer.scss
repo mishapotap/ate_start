@@ -1,3 +1,6 @@
+@import "../../assets/scss/utils/grid.scss";
+@import "../../assets/scss/base/colors.scss";
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -26,6 +29,7 @@
     flex: 0 0 50%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .footer__btn-structure {
@@ -34,4 +38,38 @@
 .footer__btn-steps {
     max-width: 424px;
     margin-left: -1px;
+}
+
+.footer__pagebuttons {
+    display: flex;
+    align-items: center;
+}
+.footer__pagebutton {
+    width: 65px;
+
+    &._next {
+        margin-left: -1px;
+    }
+    &._prev > button > svg {
+        transform: rotate(180deg);
+    }
+}
+
+.footer__links {
+    padding-right: 60px;
+}
+.footer__title {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.17em;
+    color: #767676;
+    margin-bottom: 27px;
+
+    & > b {
+        color: $primary;
+        display: inline-block;
+        margin-left: 40px;
+    }
 }
