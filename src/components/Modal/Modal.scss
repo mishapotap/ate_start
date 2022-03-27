@@ -12,6 +12,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 100;
 }
 
 .modal {
@@ -22,6 +23,9 @@
 	transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	max-width: 1125px;
 	padding: 70px 85px;
+	box-sizing: border-box;
+	max-height: 96vh;
+	overflow: auto;
 
 	.modal-transition-enter & {
 	  opacity: 0;
@@ -76,5 +80,43 @@
 
 	& > span {
 		color: $primary;
+	}
+}
+
+.modal__link {
+	font-weight: 900;
+	font-size: 11px;
+	line-height: 13px;
+	text-align: right;
+	letter-spacing: 0.14em;
+	text-align: right;
+	padding-top: 93px;
+}
+
+.modal__link span {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.modal__subtext {
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+
+.modal__row {
+	display: flex;
+	align-items: center;
+}
+
+.modal__col {
+	flex: 0 0 50%;
+	&_left {
+		padding-right: 20px;
+	}
+	&_right {
+		padding-left: 20px;
+	}
+	& > img {
+		max-width: 100%;
 	}
 }

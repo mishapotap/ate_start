@@ -12,17 +12,14 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-const video = videos.video11
-
-export const A0 = () => {
+export const A4 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
     return (
         <Layout>
             <div class="step-title">
-                Подготовительный этап
-                <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+                
             </div>
-            <Aes step='a0' />
+            <Aes step='a4' />
             <Footer>
                 <div className='footer__btns'>
                     <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
@@ -38,21 +35,21 @@ export const A0 = () => {
                     <div className='footer__right'>
                         <div className='footer__links'>
                             <div className='footer__title'>
-                                Подготовительный этап
-                                <b>Подэтап А0</b>
+                                Ревизия основного оборудования
+                                <b>Подэтап А4</b>
                             </div>
                             <div className='footer__link'>
-                                <Link to={routes.A1}>
+                                <Link to={routes.B0}>
                                     <span>Смотреть далее</span>
-                                    <span>Подэтап А1</span>
+                                    <span>Подэтап А5</span>
                                 </Link>        
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.MAP} className='footer__pagebutton _prev'>
+                            <Link to={routes.A2} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.A1} className='footer__pagebutton _next'>
+                            <Link to={routes.B0} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
@@ -61,15 +58,21 @@ export const A0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Подготовительный этап</h3>
+                    <div className='modal__stage-subtitle'><span>А4</span> Подэтап</div>
+                    <h3>Ревизия основного оборудования</h3>
                     <div class='text'>
-                        Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
+                        <div className='modal__subtext'>Подэтап, в течение которого производятся ревизия основного оборудования после ХГО.</div>
+                        <ul>
+                            <li>Выполняется разборка реактора после ХГО, ревизия дефектного и выбранного оборудования оборудования РУ и первого контура, оценка технического состояния после испытаний на ХГО.</li>
+                            <li>Выполняется подготовка грузоподъемного и транспортно-технологического оборудования к загрузке ядерного топлива в реактор.</li>
+                            <li>Выполняются промывки реактора борным раствором, а также систем первого контура и систем безопасности. Создаются регламентные запасы борного раствора.</li>
+                            <li>Заканчиваются проверки и испытания различных систем АСУ ТП (<b>АСУ ТП - автоматизированные системы управления технологическими процессами</b>), ответственных за контроль работы реактора. Энергоблок проходит проверку готовности регулирующими контролирующими органами и получает разрешение на начало загрузки ядерного топлива и физического пуска реактора.</li>
+                        </ul>
                     </div>
                     <div className='modal__link'>
-                        <Link to={routes.A1}>
+                        <Link to={routes.B0}>
                             <span>Смотреть далее</span>
-                            <span>Подэтап А1</span>
+                            <span>Подэтап А5</span>
                         </Link>
                     </div>
                 </div>

@@ -12,17 +12,15 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-const video = videos.video11
+import ReactorPic from '../../assets/img/reactor.jpg'
 
-export const A0 = () => {
+export const B2 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
     return (
         <Layout>
             <div class="step-title">
-                Подготовительный этап
-                <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             </div>
-            <Aes step='a0' />
+            <Aes step='b2' />
             <Footer>
                 <div className='footer__btns'>
                     <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
@@ -38,21 +36,21 @@ export const A0 = () => {
                     <div className='footer__right'>
                         <div className='footer__links'>
                             <div className='footer__title'>
-                                Подготовительный этап
-                                <b>Подэтап А0</b>
+                                Вывод реактора на МКУ
+                                <b>Подэтап Б2</b>
                             </div>
                             <div className='footer__link'>
-                                <Link to={routes.A1}>
+                                <Link to={routes.V0}>
                                     <span>Смотреть далее</span>
-                                    <span>Подэтап А1</span>
+                                    <span>Этап В</span>
                                 </Link>        
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.MAP} className='footer__pagebutton _prev'>
+                            <Link to={routes.B1} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.A1} className='footer__pagebutton _next'>
+                            <Link to={routes.V0} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
@@ -61,15 +59,28 @@ export const A0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Подготовительный этап</h3>
-                    <div class='text'>
-                        Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
+                    <div className='modal__stage-subtitle'><span>Б2</span> Подэтап</div>
+                    <h3>Вывод реактора на МКУ</h3>
+                    <div className='modal__row'>
+                        <div className='modal__col modal__col_left'>
+                            <img src={ReactorPic} alt='' /> 
+                        </div>
+                        <div className='modal__col modal__col_right'>
+                            <div class='text'>
+                                <div className='modal__subtext'>Достижение критического состояния реактора и выполнение физических экспериментов на МКУ (мин. контролируемый уровень мощности)</div>
+                                <ul>
+                                    <li>Первый вывод реактора в критическое состояние (управляемая ядерная реакция);</li>
+                                    <li>Проводятся физические испытания и подтверждаются нейтронно-физические характеристики активной зоны</li>
+                                    <li>Комплексная проверка АКНП (аппаратура контроля нейтронного потока), СУЗ (система управления и защиты), защит и блокировок, в т.ч. проверка правильного функционирования систем АСУ ТП и систем контроля нейтронной мощности, в том числе тарировка измерителей</li>
+                                    <li>Физические эксперименты на мощности до 1% от номинальной.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div className='modal__link'>
-                        <Link to={routes.A1}>
+                        <Link to={routes.V0}>
                             <span>Смотреть далее</span>
-                            <span>Подэтап А1</span>
+                            <span>Подэтап В</span>
                         </Link>
                     </div>
                 </div>

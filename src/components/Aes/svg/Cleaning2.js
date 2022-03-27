@@ -5,6 +5,10 @@ export const Cleaning2 = (props) => {
 
     return (
         <Fragment>
+            <rect x="131" y="100" width="1658.25" height="737" fill="url(#pattern11)"
+                style={{opacity: isActive ? 1 : 0}}
+            />
+
             <circle cx="1325" cy="614" r="4" fill="white" style={{opacity: isActive ? 1 : 0}}/>
 
             <path d="M1327.32 617L1381.15 719" stroke="white" style={{opacity: isActive ? 1 : 0}}/>

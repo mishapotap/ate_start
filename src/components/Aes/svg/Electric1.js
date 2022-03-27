@@ -4,9 +4,9 @@ export const Electric1 = (props) => {
     const {isActive} = props
     return (
         <Fragment>
-            <rect x="131" y="100" width="1658.25" height="737" fill="url(#pattern6)"
+            {/* <rect x="131" y="100" width="1658.25" height="737" fill="url(#pattern6)"
                 style={{opacity: isActive ? 1 : 0}}
-            />
+            /> */}
 
             <circle cx="826" cy="473" r="4" fill="white" style={{opacity: isActive ? 1 : 0}}/>
 

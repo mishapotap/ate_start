@@ -12,17 +12,15 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-const video = videos.video11
+import ReactorPic from '../../assets/img/reactor.jpg'
 
-export const A0 = () => {
+export const B1 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
     return (
         <Layout>
             <div class="step-title">
-                Подготовительный этап
-                <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             </div>
-            <Aes step='a0' />
+            <Aes step='b1' />
             <Footer>
                 <div className='footer__btns'>
                     <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
@@ -38,21 +36,21 @@ export const A0 = () => {
                     <div className='footer__right'>
                         <div className='footer__links'>
                             <div className='footer__title'>
-                                Подготовительный этап
-                                <b>Подэтап А0</b>
+                                Загрузка реактора ядерным топливом и испытания в подкритическом состоянии
+                                <b>Подтап Б1</b>
                             </div>
                             <div className='footer__link'>
-                                <Link to={routes.A1}>
+                                <Link to={routes.B2}>
                                     <span>Смотреть далее</span>
-                                    <span>Подэтап А1</span>
+                                    <span>Подэтап Б2</span>
                                 </Link>        
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.MAP} className='footer__pagebutton _prev'>
+                            <Link to={routes.B0} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.A1} className='footer__pagebutton _next'>
+                            <Link to={routes.B2} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
@@ -61,15 +59,28 @@ export const A0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Подготовительный этап</h3>
-                    <div class='text'>
-                        Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
+                    <div className='modal__stage-subtitle'><span>Б1</span> Подэтап</div>
+                    <h3>Загрузка реактора ядерным топливом и испытания в подкритическом состоянии</h3>
+                    <div className='modal__row'>
+                        <div className='modal__col modal__col_left'>
+                            <img src={ReactorPic} alt='' /> 
+                        </div>
+                        <div className='modal__col modal__col_right'>
+                            <div class='text'>
+                                <ul>
+                                    <li>Первая загрузка ядерного топлива в активную зону;</li>
+                                    <li>Сборка реактора, разогрев до номинальных параметров I контура;</li>
+                                    <li>Уплотнение реактора</li>
+                                    <li>Проверка трубопроводов и оборудования 1-го контура на плотность</li>
+                                    <li>Теплофизические и теплогидравлические эксперименты</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div className='modal__link'>
-                        <Link to={routes.A1}>
+                        <Link to={routes.B2}>
                             <span>Смотреть далее</span>
-                            <span>Подэтап А1</span>
+                            <span>Подэтап Б2</span>
                         </Link>
                     </div>
                 </div>

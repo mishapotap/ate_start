@@ -1,4 +1,4 @@
-import React, {Component, Fragment, useState} from 'react'
+import React, {Component, Fragment, useEffect, useRef, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
@@ -12,17 +12,31 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-const video = videos.video11
+const video1 = videos.finalIntro
+const video2 = videos.finalVideo
 
-export const A0 = () => {
+export const Final = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
+    const [isIntroEnded, setIsIntroEnded] = useState(false);
+    const video1Ref = useRef(null)
+    
+    const handleEnded = () => {
+        console.log('!!');
+        setIsIntroEnded(true);
+    }
+
     return (
         <Layout>
             <div class="step-title">
-                Подготовительный этап
+                Промышленная эксплуатация
                 <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             </div>
-            <Aes step='a0' />
+            
+            <Video video={video1} controls={false} background={true} onEnded={handleEnded} />
+            
+            <div style={{opacity: isIntroEnded ? 1 : 0}}>
+                <Video video={video2} controls={false} background={true} loop={true} />
+            </div>
             <Footer>
                 <div className='footer__btns'>
                     <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
@@ -38,21 +52,15 @@ export const A0 = () => {
                     <div className='footer__right'>
                         <div className='footer__links'>
                             <div className='footer__title'>
-                                Подготовительный этап
-                                <b>Подэтап А0</b>
-                            </div>
-                            <div className='footer__link'>
-                                <Link to={routes.A1}>
-                                    <span>Смотреть далее</span>
-                                    <span>Подэтап А1</span>
-                                </Link>        
+                                Промышленная эксплуатация
+                                <b>Финал</b>
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.MAP} className='footer__pagebutton _prev'>
+                            <Link to={routes.G2} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.A1} className='footer__pagebutton _next'>
+                            <Link to={routes.MAP} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
@@ -61,16 +69,10 @@ export const A0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Подготовительный этап</h3>
+                    <div className='modal__stage-subtitle'><span>Г2</span> Подэтап</div>
+                    <h3>Промышленная эксплуатация</h3>
                     <div class='text'>
-                        Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
-                    </div>
-                    <div className='modal__link'>
-                        <Link to={routes.A1}>
-                            <span>Смотреть далее</span>
-                            <span>Подэтап А1</span>
-                        </Link>
+                        Промышленная эксплуатация - это эксплуатация блока АЭС, безопасность и соответствие проекту которого подтверждены испытаниями в процессе ввода в эксплуатацию. Осуществляется после выдачи ГК «РОСТАТОМ» Разрешения на ввод в эксплуатацию блока АЭС.
                     </div>
                 </div>
             </Modal>

@@ -127,6 +127,13 @@ body._frozen {
   min-height: 100%;
   flex-direction: column; }
 
+ol {
+  margin: 1em 0;
+  padding-left: 20px; }
+
+ol li {
+  margin: 1em 0; }
+
 ul {
   margin: 1em 0;
   padding: 0; }
@@ -135,17 +142,6 @@ ul li {
   position: relative;
   padding-left: 20px;
   margin-bottom: .5em; }
-
-ul li:before {
-  content: '';
-  position: absolute;
-  top: .4em;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px #219653; }
 
 h1 {
   font-size: 28px;
@@ -177,3 +173,24 @@ a {
   line-height: 2em;
   letter-spacing: 0.1em;
   color: #000000; }
+
+.step-title {
+  position: absolute;
+  top: 141px;
+  right: 105px;
+  z-index: 10;
+  font-weight: 300;
+  font-size: 29px;
+  line-height: 53px;
+  text-align: right;
+  letter-spacing: 0.1em;
+  color: #263973; }
+
+.step-title__details {
+  text-align: right;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #263973; }

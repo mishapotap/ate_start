@@ -4,6 +4,7 @@ import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
 import Layout from '../../components/Layout';
 import { Modal } from '../../components/Modal/Modal';
+import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import * as routes from '../../const/routes';
 
 import './Map.scss'
@@ -13,6 +14,7 @@ export const Map = () => {
     const [isS2ModalOpened, setIsS2ModalOpened] = useState(false);
     const [isS3ModalOpened, setIsS3ModalOpened] = useState(false);
     const [isS4ModalOpened, setIsS4ModalOpened] = useState(false);
+    const [isStepModalOpened, setIsStepModalOpened] = useState(false);
 
     return (
         <Layout>
@@ -139,7 +141,9 @@ export const Map = () => {
             </Modal>
 
             <Footer>
-                <div className='footer__btns'></div>
+                <div className='footer__btns'>
+                    <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
+                </div>
                 <div className='footer__content'>
                     <div className='footer__left'>
                         <div className='footer__btn-steps'>
@@ -150,6 +154,16 @@ export const Map = () => {
                     </div>
                 </div>
             </Footer>
+
+            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
+                    <h3>ПРЕДПУСКОВЫЕ НАЛАДОЧНЫЕ РАБОТЫ</h3>
+                    <div class='text'>
+                        Этап ввода в эксплуатацию энергоблока АЭС, при котором законченные строительством и монтажом системы и элементы блока АЭС приводятся в состояние эксплуатационной готовности с проверкой их соответствия установленным в проекте критериям и характеристикам и который завершается готовность блока АЭС к физическому пуску реактора (разделён на 4 подэтапа).
+                    </div>
+                </div>
+            </Modal>
         </Layout>
     );
 };

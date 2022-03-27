@@ -12,17 +12,15 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-const video = videos.video11
-
-export const A0 = () => {
+export const A2 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
     return (
         <Layout>
             <div class="step-title">
-                Подготовительный этап
+                Испытания СГО (Система герметичных охлаждений)
                 <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             </div>
-            <Aes step='a0' />
+            <Aes step='a2' />
             <Footer>
                 <div className='footer__btns'>
                     <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
@@ -38,21 +36,21 @@ export const A0 = () => {
                     <div className='footer__right'>
                         <div className='footer__links'>
                             <div className='footer__title'>
-                                Подготовительный этап
-                                <b>Подэтап А0</b>
+                                Испытания СГО (Система герметичных охлаждений)
+                                <b>Подэтап А2</b>
                             </div>
                             <div className='footer__link'>
-                                <Link to={routes.A1}>
+                                <Link to={routes.A3}>
                                     <span>Смотреть далее</span>
-                                    <span>Подэтап А1</span>
+                                    <span>Подэтап А3</span>
                                 </Link>        
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.MAP} className='footer__pagebutton _prev'>
+                            <Link to={routes.A1} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.A1} className='footer__pagebutton _next'>
+                            <Link to={routes.A3} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
@@ -61,15 +59,19 @@ export const A0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Подготовительный этап</h3>
+                    <div className='modal__stage-subtitle'><span>А2</span> Подэтап</div>
+                    <h3>Испытания СГО (Система герметичных охлаждений)</h3>
                     <div class='text'>
-                        Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
+                        <div className='modal__subtext'>
+                            Проверяется плотность и прочность герметичных ограждений (внутренней защитной оболочки).
+                        </div>
+                        <p>Проводится проверка герметичного ограждения на прочность и герметичность, выполняется замер утечек из гермоограждения, выполняется замеры и анализ динамики фактического напряженно-деформированного состояния конструкций защитной оболочки.</p>
+                        <p><b>Герметичное ограждение</b> – совокупность элементов строительных и других конструкций, которые ограждают пространство вокруг реакторной установки или другого объекта, содержащего радиоактивные вещества и образуют предусмотренную проектом границу и препятствуют распространению радиоактивных веществ.</p>
                     </div>
                     <div className='modal__link'>
-                        <Link to={routes.A1}>
+                        <Link to={routes.A3}>
                             <span>Смотреть далее</span>
-                            <span>Подэтап А1</span>
+                            <span>Подэтап А3</span>
                         </Link>
                     </div>
                 </div>

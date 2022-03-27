@@ -12,17 +12,15 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-const video = videos.video11
-
-export const A0 = () => {
+export const A3 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
     return (
         <Layout>
             <div class="step-title">
-                Подготовительный этап
+                Холодно-Горячая обкатка реакторной установки
                 <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             </div>
-            <Aes step='a0' />
+            <Aes step='a3' />
             <Footer>
                 <div className='footer__btns'>
                     <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
@@ -38,21 +36,21 @@ export const A0 = () => {
                     <div className='footer__right'>
                         <div className='footer__links'>
                             <div className='footer__title'>
-                                Подготовительный этап
-                                <b>Подэтап А0</b>
+                                Холодно-Горячая обкатка реакторной установки
+                                <b>Подэтап А3</b>
                             </div>
                             <div className='footer__link'>
-                                <Link to={routes.A1}>
+                                <Link to={routes.A4}>
                                     <span>Смотреть далее</span>
-                                    <span>Подэтап А1</span>
+                                    <span>Подэтап А4</span>
                                 </Link>        
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.MAP} className='footer__pagebutton _prev'>
+                            <Link to={routes.A2} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.A1} className='footer__pagebutton _next'>
+                            <Link to={routes.A4} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
@@ -61,15 +59,15 @@ export const A0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Подготовительный этап</h3>
+                    <div className='modal__stage-subtitle'><span>А3</span> Подэтап</div>
+                    <h3>Холодно-Горячая обкатка реакторной установки</h3>
                     <div class='text'>
-                        Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
+                        Подэтап, в течение которого проводится циркуляционная промывка первого контура и гидравлические испытания трубопроводов и оборудования, наладка, испытания и опробование технологических систем и оборудования, электрооборудования и АСУ ТП при работе на номинальных параметрах первого контура с загруженными в реактор имитаторами топливных кассет с целью подтверждения проектных характеристик систем и оборудования реакторной установки
                     </div>
                     <div className='modal__link'>
-                        <Link to={routes.A1}>
+                        <Link to={routes.A4}>
                             <span>Смотреть далее</span>
-                            <span>Подэтап А1</span>
+                            <span>Подэтап А4</span>
                         </Link>
                     </div>
                 </div>
