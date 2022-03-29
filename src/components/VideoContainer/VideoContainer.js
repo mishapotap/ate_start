@@ -29,18 +29,23 @@ export default class VideoContainer extends Component {
     setSize = () => {
         const ratioTreshold = this.getRatioTreshold()
         const windowWidth = window.innerWidth
+        // const windowHeight = window.innerHeight - 89
         const windowHeight = window.innerHeight
         let width, height
         let expectedHeight = windowWidth / VIDEO_WIDTH * VIDEO_HEIGHT
 
+        height = windowHeight
+        width = windowHeight / VIDEO_HEIGHT * VIDEO_WIDTH
+
         // if ( expectedHeight < windowHeight ) {
-        if (windowHeight - expectedHeight > windowHeight / (100 / ratioTreshold)) {
-            height = windowHeight
-            width = windowHeight / VIDEO_HEIGHT * VIDEO_WIDTH
-        } else {
-            width = windowWidth
-            height = expectedHeight
-        }
+
+        // if (windowHeight - expectedHeight > windowHeight / (100 / ratioTreshold)) {
+        //     height = windowHeight
+        //     width = windowHeight / VIDEO_HEIGHT * VIDEO_WIDTH
+        // } else {
+        //     width = windowWidth
+        //     height = expectedHeight
+        // }
 
         this.setState({width: width, height: height})
     }

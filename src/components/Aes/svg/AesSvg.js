@@ -211,52 +211,112 @@ export const AesSvg = (props) => {
     onClick={handlePumpClick}
     onMouseLeave={() => {setIsPumpAActive(false)}}
 />
+<rect x="670" y="501" width="150" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsPumpAActive(true)}}
+    onClick={handlePumpClick}
+    onMouseLeave={() => {setIsPumpAActive(false)}}
+/>
+
 <rect x="1020" y="490" width="70" height="30" fill="transparent"
     onMouseEnter={() => {setIsRdesActive(true)}}
     onClick={handleRdesClick}
     onMouseLeave={() => {setIsRdesActive(false)}}
 />
+<rect x="1120" y="660" width="100" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsRdesActive(true)}}
+    onClick={handleRdesClick}
+    onMouseLeave={() => {setIsRdesActive(false)}}
+/>
+
 <rect x="460" y="480" width="170" height="320" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsElectric2Active(true)}}
     onClick={handleElectric2Click}
     onMouseLeave={() => {setIsElectric2Active(false)}}
 />
+<rect x="520" y="770" width="200" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsElectric2Active(true)}}
+    onClick={handleElectric2Click}
+    onMouseLeave={() => {setIsElectric2Active(false)}}
+/>
+
 {/* <rect x="775" y="350" width="190" height="150" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsElectric1Active(true)}}
     onClick={handleElectric1Click}
     onMouseLeave={() => {setIsElectric1Active(false)}}
 /> */}
+
 <rect x="775" y="350" width="190" height="150" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsTurbineActive(true)}}
     onClick={handleTurbineClick}
     onMouseLeave={() => {setIsTurbineActive(false)}}
 />
+<rect x="890" y="220" width="150" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsTurbineActive(true)}}
+    onClick={handleTurbineClick}
+    onMouseLeave={() => {setIsTurbineActive(false)}}
+/>
+
 <rect x="840" y="550" width="140" height="140" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsCleaningActive(true)}}
     onClick={handleCleaningClick}
     onMouseLeave={() => {setIsCleaningActive(false)}}
 />
+<rect x="1010" y="750" width="140" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsCleaningActive(true)}}
+    onClick={handleCleaningClick}
+    onMouseLeave={() => {setIsCleaningActive(false)}}
+/>
+
 <rect x="1120" y="515" width="235" height="140" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsCleaning2Active(true)}}
     onClick={handleCleaning2Click}
     onMouseLeave={() => {setIsCleaning2Active(false)}}
 />
+<rect x="1375" y="725" width="170" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsCleaning2Active(true)}}
+    onClick={handleCleaning2Click}
+    onMouseLeave={() => {setIsCleaning2Active(false)}}
+/>
+
 <rect x="1300" y="320" width="180" height="252" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsPoolsActive(true)}}
     onClick={handlePoolsClick}
     onMouseLeave={() => {setIsPoolsActive(false)}}
 />
+<rect x="1485" y="370" width="200" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsPoolsActive(true)}}
+    onClick={handlePoolsClick}
+    onMouseLeave={() => {setIsPoolsActive(false)}}
+/>
+
 <rect x="970" y="282" width="150" height="200" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsReactorActive(true)}}
     onClick={handleReactorClick}
     onMouseLeave={() => {setIsReactorActive(false)}}
 />
+<rect x="1070" y="162" width="430" height="100" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsReactorActive(true)}}
+    onClick={handleReactorClick}
+    onMouseLeave={() => {setIsReactorActive(false)}}
+/>
+
 <rect x="1122" y="340" width="150" height="150" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsSecondReactorActive(true)}}
     onClick={handleSecondReactorClick}
     onMouseLeave={() => {setIsSecondReactorActive(false)}}
 />
+<rect x="1242" y="265" width="305" height="40" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsSecondReactorActive(true)}}
+    onClick={handleSecondReactorClick}
+    onMouseLeave={() => {setIsSecondReactorActive(false)}}
+/>
+
 <rect x="815" y="720" width="70" height="50" fill="transparent" style={{opacity: 0.5}}
+    onMouseEnter={() => {setIsBoilerActive(true)}}
+    onClick={handleBoilerClick}
+    onMouseLeave={() => {setIsBoilerActive(false)}}
+/>
+<rect x="890" y="840" width="220" height="40" fill="transparent" style={{opacity: 0.5}}
     onMouseEnter={() => {setIsBoilerActive(true)}}
     onClick={handleBoilerClick}
     onMouseLeave={() => {setIsBoilerActive(false)}}

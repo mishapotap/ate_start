@@ -50,7 +50,7 @@ export const Map = () => {
                             </div>
                         </div>
                     </Link>
-                    <div className='map__step' style={{left: '9.2%'}}>
+                    <Link to={routes.A1} className='map__step' style={{left: '9.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>A1</div>
                         <div className='map__step-desc map__step-desc_bottom'>
@@ -59,70 +59,70 @@ export const Map = () => {
                                 Передача из монтажа в ПНР системы дистиллята
                             </div>
                         </div>
-                    </div>
-                    <div className='map__step' style={{left: '18.2%'}}>
+                    </Link>
+                    <Link to={routes.A2} className='map__step' style={{left: '18.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>A2</div>
                         <div className='map__step-desc'>
                             Испытания герметичного ограждения
                         </div>
-                    </div>
-                    <div className='map__step' style={{left: '27.2%'}}>
+                    </Link>
+                    <Link to={routes.A3} className='map__step' style={{left: '27.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>A3</div>
                         <div className='map__step-desc map__step-desc_bottom'>
                             Холодно-горячая обкатка реакторной&nbsp;установки
                         </div>
-                    </div>
-                    <div className='map__step' style={{left: '36.2%'}}>
+                    </Link>
+                    <Link to={routes.A4} className='map__step' style={{left: '36.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>A4</div>
                         <div className='map__step-desc'>
                             Ревизия основного оборудования реакторной&nbsp;установки
                         </div>
-                    </div>
+                    </Link>
 
                     <div className='map__stage' style={{left: '46%'}}>Этап <b>Б</b></div>
-                    <div className='map__step' style={{left: '47.2%'}}>
+                    <Link to={routes.B1} className='map__step' style={{left: '47.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>Б1</div>
                         <div className='map__step-desc'>
                             Загрузка реактора ядерным топливом и испытания в подкритическом состоянии
                         </div>
-                    </div>
-                    <div className='map__step' style={{left: '54.2%'}}>
+                    </Link>
+                    <Link to={routes.B2} className='map__step' style={{left: '54.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>Б2</div>
                         <div className='map__step-desc map__step-desc_bottom'>
                             Достижение критического состояния реактора и выполнение физических экспериментов на МКУ
                         </div>
-                    </div>
+                    </Link>
 
                     <div className='map__stage' style={{left: '67%'}}>Этап <b>В</b></div>
-                    <div className='map__step' style={{left: '68.2%'}}>
+                    <Link to={routes.V0} className='map__step' style={{left: '68.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>В1</div>
                         <div className='map__step-desc'>
                             Освоение мощности реактора с уровня мощности физического пуска до включения генератора в сеть
                         </div>
-                    </div>
+                    </Link>
 
                     <div className='map__stage' style={{left: '80%'}}>Этап <b>Г</b></div>
-                    <div className='map__step' style={{left: '81.2%'}}>
+                    <Link to={routes.G1} className='map__step' style={{left: '81.2%'}}>
                         <div className='map__point'></div>
                         <div className='map__step-name'>Г1</div>
                         <div className='map__step-desc'>
                             Освоение мощности блока АС от включения генератора в сеть до 100% номинальной мощности
                         </div>
-                    </div>
-                    <div className='map__step' style={{left: '100%'}}>
+                    </Link>
+                    <Link to={routes.G2} className='map__step' style={{left: '100%'}}>
                         <div className='map__point map__point_final'></div>
                         <div className='map__step-name'>Г2</div>
                         <div className='map__step-desc map__step-desc_bottom  map__step-desc_final'>
                             Комплексное опробование энергоблока АС на номинальной мощности
                             <div>Ввод блока АС в эксплуатацию </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
 

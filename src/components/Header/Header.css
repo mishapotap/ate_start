@@ -10,8 +10,9 @@
 .header__logo {
   flex: 0 0 179px;
   padding-left: 50px; }
-  .header__logo > img {
-    width: 129px; }
+
+.header__logo img {
+  width: 129px; }
 
 .header__middle {
   flex: 1 1 100%;
@@ -39,9 +40,12 @@
   background: #4EA4D9;
   color: #ffffff;
   transition: .3s; }
-  .menu-btn:hover {
-    background: #2D74AD; }
-  .menu-btn:active {
-    background: #1A588B; }
-  .menu-btn > svg {
-    margin-left: 30px; }
+
+.menu-btn:hover {
+  background: #2D74AD; }
+
+.menu-btn:active {
+  background: #1A588B; }
+
+.menu-btn > svg {
+  margin-left: 30px; }

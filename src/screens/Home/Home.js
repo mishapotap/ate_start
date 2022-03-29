@@ -13,9 +13,7 @@ const video = videos.video11
 export const Home = () => {
     return (
         <Layout>
-            <VideoContainer>
-                <Video video={video} controls={false} background={true} />
-            </VideoContainer>
+            <Video video={video} controls={false} background={true} />
             <Footer>
                 <div className='footer__left'></div>
                 <div className='footer__right'>
