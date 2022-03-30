@@ -276,9 +276,9 @@ export default class VimeoPlayer extends Component {
                     }
                 </TransitionGroup>
 
-                { volumeSwiper && 
+                {/* { volumeSwiper && 
                     <Volume onVolumeChange={this.handleVolumeChange} onToggleVolume={this.toggleVolume} volume={volume} /> 
-                }
+                } */}
             </div>
         );
     }

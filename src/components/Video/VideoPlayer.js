@@ -226,9 +226,9 @@ export default class VideoPlayer extends Component{
 				</TransitionGroup>
 			)}
 
-			{ volumeSwiper && (
+			{/* { volumeSwiper && (
 				<Volume onVolumeChange={this.handleVolumeChange} onToggleVolume={this.toggleVolume} navContent={navContent} volume={0} />
-			)}
+			)} */}
 	  	</div>
 	  );
   }

@@ -145,3 +145,73 @@ a {
 	text-transform: uppercase;
 	color: $primary;
 }
+
+.arrow-btn {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	height: 464px;
+	width: 105px;
+	cursor: pointer;
+	z-index: 10;
+	transition: .3s;
+
+	&_prev {
+		background-image: url(./assets/img/backBg.jpg);
+		left: 0;
+	}
+	&_next {
+		background-image: url(./assets/img/forwardBg.jpg);
+		right: 0;
+	}
+
+	&.hidden {
+		opacity: 0;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		transition: .3s;
+	}
+
+	&_prev &__arrow {
+		right: -83px;
+	}
+	&_next &__arrow {
+		left: -83px;
+	}
+	&_next &__arrow svg {
+		transform: rotate(180deg);
+	}
+	&_prev:hover &__arrow {
+		right: -73px;
+	}
+	&_next:hover &__arrow {
+		left: -73px;
+	}
+	&_prev.hidden &__arrow {
+		right: -110px;
+	}
+	&_next.hidden &__arrow {
+		left: -110px;
+	}
+
+	&__text {
+		position: absolute;
+		top: 23px;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 0.13em;
+		text-transform: uppercase;
+		color: #000;
+	}
+	&_prev &__text {
+		right: 0;
+	}
+	&_next &__text {
+		left: 0;
+	}
+}

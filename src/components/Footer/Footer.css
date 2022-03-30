@@ -45,12 +45,10 @@
 
 .footer__pagebutton {
   width: 65px; }
-
-.footer__pagebutton._next {
-  margin-left: -1px; }
-
-.footer__pagebutton._prev > button > svg {
-  transform: rotate(180deg); }
+  .footer__pagebutton._next {
+    margin-left: -1px; }
+  .footer__pagebutton._prev > button > svg {
+    transform: rotate(180deg); }
 
 .footer__links {
   padding-right: 60px; }
@@ -75,8 +73,7 @@
   letter-spacing: 0.17em;
   color: #767676;
   margin-bottom: 27px; }
-
-.footer__title > b {
-  color: #263973;
-  display: inline-block;
-  margin-left: 40px; }
+  .footer__title > b {
+    color: #263973;
+    display: inline-block;
+    margin-left: 40px; }
