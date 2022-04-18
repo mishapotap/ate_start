@@ -1,0 +1,34 @@
+.power {
+  width: 696px;
+  height: 33px;
+  background: #F1F1F1;
+  border-radius: 75px;
+  margin: 21px 0 37px 195px;
+  position: relative; }
+  .power__line-inner {
+    height: 33px;
+    width: 100%;
+    background: linear-gradient(270deg, #4EA4D9 0%, rgba(78, 164, 217, 0) 100%);
+    border-radius: 75px;
+    position: relative;
+    animation: power .8s ease-in-out .2s; }
+  .power__line svg {
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    transform: translate(0, -50%); }
+  .power__percent {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-150%, -50%);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: #4EA4D9; }
+
+@keyframes power {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }

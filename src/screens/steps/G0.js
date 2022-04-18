@@ -1,4 +1,4 @@
-import React, {Component, Fragment, useState} from 'react'
+import React, {Component, Fragment, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
@@ -12,12 +12,22 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-import ReactorPic from '../../assets/img/reactor.jpg'
+import ReactorPic from '../../assets/img/Scheme-full.gif'
+import { Structure } from '../../components/Structure';
 
 export const G0 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
+    const [isStructureOpened, setIsStructureOpened] = useState(false);
+
+    useEffect(() => {
+        window.lastStep = routes.G0;
+    }, []);
+
     return (
-        <Layout>
+        <Fragment>
+             <div class="step-title1">
+                Этап Г
+            </div>
             <div class="step-title">
                 Опытно-промышленная эксплуатация
                 <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
@@ -25,10 +35,13 @@ export const G0 = () => {
             <Aes step='g0' />
             <Footer>
                 <div className='footer__btns'>
-                    <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
+                     
                 </div>
                 <div className='footer__content'>
                     <div className='footer__left'>
+                        <div className='footer__btn-structure short'>
+                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
+                        </div>
                         <div className='footer__btn-steps'>
                             <Link to={routes.MAP}>
                                 <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
@@ -59,12 +72,19 @@ export const G0 = () => {
                     </div>
                 </div>
             </Footer>
-            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
+            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}} className='modal_large'>
                 <div>
                     <div className='modal__stage-subtitle'><span>Г</span> Этап</div>
                     <h3>Опытно-промышленная эксплуатация</h3>
-                    <div class='text'>
-                        Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.
+                    <div className='modal__row'>
+                        <div className='modal__col modal__col_left'>
+                            <img src={ReactorPic} alt='' /> 
+                        </div>
+                        <div className='modal__col modal__col_right'>
+                            <div class='text'>
+                                Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.
+                            </div>
+                        </div>
                     </div>
                     <div className='modal__link'>
                         <Link to={routes.G1}>
@@ -74,6 +94,10 @@ export const G0 = () => {
                     </div>
                 </div>
             </Modal>
-        </Layout>
+
+            <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
+                <Structure />
+            </Modal>
+        </Fragment>
     );
 };

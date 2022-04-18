@@ -1,5 +1,8 @@
+@import '../../assets/scss/base/colors';
+@import "../../assets/scss/utils/grid.scss";
+
 .map {
-    padding: 90px 50px;
+    padding: 35px 30px;
 }
 .map__title {
     font-weight: 300;
@@ -8,6 +11,12 @@
     letter-spacing: 0.1em;
     color: #263973;
     margin-bottom: 114px;
+
+    @include xxl {
+        font-size: 27px;
+        line-height: 1.2em;
+        margin-bottom: 35px;
+    }
 }
 .map__line {
     border-top: 3px solid #263973;
@@ -67,11 +76,23 @@
         max-width: 220px;
         left: -209px;
         text-align: right;
+
+        @include xxl {
+            left: -152px;
+            max-width: 200px;
+        }
     }
 
     & > div {
-        color: #263973;
+        // color: #263973;
         padding-top: 12px;
+    }
+
+    @include xxl {
+        margin-top: -19px;
+        font-size: 12px;
+        line-height: 1.2em;
+        max-width: 160px;
     }
 }
 .map__step:hover .map__step-desc {
@@ -83,7 +104,8 @@
     top: -18px;
     font-weight: 900;
     font-size: 21px;
-    line-height: 30px;letter-spacing: 0.1em;
+    line-height: 30px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #D0D0D0;
     transform: rotate(-90deg);
@@ -92,6 +114,12 @@
     padding-bottom: 12px;
     padding-top: 2px;
 
+    @include xxl {
+        font-size: 18px;
+        line-height: 1.3em;
+        top: -13px;
+    }
+
     & > b {
         color: #263973;
     }
@@ -99,7 +127,7 @@
 
 .map__stagetitles {
     position: relative;
-    padding-bottom: 204px;
+    padding-bottom: 170px;
     margin: 0 4px;
 }
 .map__stagetitle {
@@ -111,9 +139,18 @@
     letter-spacing: 0.1em;
     color: #263973;
     white-space: nowrap;
+    
+    @include xxl {
+        font-size: 16px;
+        line-height: 1.2em;
+        white-space: initial;
+    }
 
     & > div {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
+        @include xxl {
+            min-height: 38px;
+        }
     }
 }
 
@@ -133,4 +170,16 @@
     color: #000;
     padding: 10px 30px;
     cursor: pointer;
+    transition: .3s;
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+        color: $white;
+    }
+
+    @include xxl {
+        height: 34px;
+        font-size: 8px;
+        padding: 6px 17px;
+    }
 }

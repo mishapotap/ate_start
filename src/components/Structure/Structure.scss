@@ -1,0 +1,183 @@
+@import "../../assets/scss/utils/grid.scss";
+
+.structure {
+    padding: 0px 0px 30px;
+
+    &__stages {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__stage {
+        padding: 0 25px;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #263973;
+
+        @include xxl {
+            font-size: 14px;
+            padding: 0 12px;
+        }
+
+        &_3 {
+            padding-top: 13px;
+        }
+    }
+
+    &__mid {
+        width: 312px;
+        height: 68px;
+        // background: url(../../assets/img/structure-mid.png) no-repeat;
+        background-size: contain;
+        margin-top: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @include xxl {
+            width: 200px;
+        }
+
+        &::before, &::after {
+            content: '';
+            width: 130px;
+            height: 3px;
+            background: #CACACA;
+
+            @include xxl {
+                width: 80px;
+                height: 2px;
+            }
+        }
+
+        & i {
+            width: 13px;
+            height: 13px;
+            border-radius: 13px;
+            background: #FFFFFF;
+            border: 5px solid #263973;
+
+            @include xxl {
+                width: 9px;
+                height: 9px;
+                border-width: 4px;
+            }
+        }
+
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: structure-rotate infinite 10s linear;
+            @include xxl {
+                width: 38px;
+            }
+        }
+    }
+
+    &__stage_3 &__logos {
+        padding-top: 60px;
+
+        @include xxl {
+            padding-top: 40px;
+        }
+    }
+    &__logos {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+
+        @include xxl {
+            padding-top: 30px;
+        }
+
+        & > div {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 29px;
+            letter-spacing: 0.1em;
+            color: #767676;
+
+            &._text {
+                padding-left: 30px;
+            }
+        }
+    }
+
+    &__partners {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        margin-top: 140px;
+        padding-top: 40px;
+        position: relative;
+
+        @include xxl {
+            margin-top: 100px;
+        }
+
+        &-inner {
+            transition: .4s;
+            position: relative;
+        }
+    }
+
+    &__arrow {
+        height: 40px;
+        width: 133px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        cursor: pointer;
+
+        @include xxl {
+            width: 100px;
+
+            & svg {
+                width: 100px;
+            }
+        }
+
+        &.prev {
+            left: 0;
+        }
+        &.next {
+            right: 0;
+            & > svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.structure__title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 53px;
+    letter-spacing: 0.1em;
+    color: #263973;
+    margin-bottom: 180px;
+
+    @include xxl {
+        font-size: 27px;
+        line-height: 1.2em;
+        margin-bottom: 100px;
+    }
+}
+
+@keyframes structure-rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}

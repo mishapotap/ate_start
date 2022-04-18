@@ -1,12 +1,17 @@
 .aes {
   position: relative;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 .aes__svg {
   max-width: 100%;
   width: 95%;
-  margin-top: -115px; }
+  margin-top: -50px; }
+  @media (max-width: 1600px) {
+    .aes__svg {
+      margin-top: 0px; } }
   .aes__svg * {
     transition: opacity .3s;
     position: relative;

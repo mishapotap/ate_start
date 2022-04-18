@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, withRouter } from 'react-router-dom'
-// import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
+// import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Layout from './components/Layout';
 import * as routes from './const/routes';
@@ -26,89 +26,94 @@ import { V0 } from './screens/steps/V0';
 function App({location, ...props}) {
     return (
         <Router>
-            <TransitionGroup style = {{height: '100%'}}>
-                <CSSTransition
-                    classNames = 'routefade'
-                    timeout = { 500 }>
-                    <Routes location = { location }>
+            <Layout>
+                <Route render = { ({ location }) => (
+                    <TransitionGroup style = {{height: '100%'}}>
+                        <CSSTransition
+                            classNames = 'routefade'
+                            key = { location.key }
+                            timeout = { 500 }>
+                            <Switch location = { location }>
                         <Route
                             exact
-                            element={<Home />}
+                            component={Home}
                             path = { routes.HOME }
                         />
                         <Route
                             exact
-                            element={<Map />}
+                            component={Map}
                             path = { routes.MAP }
                         />
                         <Route
                             exact
-                            element={<A0 />}
+                            component={A0}
                             path = { routes.A0 }
                         />
                         <Route
                             exact
-                            element={<A1 />}
+                            component={A1}
                             path = { routes.A1 }
                         />
                         <Route
                             exact
-                            element={<A2 />}
+                            component={A2}
                             path = { routes.A2 }
                         />
                         <Route
                             exact
-                            element={<A3 />}
+                            component={A3}
                             path = { routes.A3 }
                         />
                         <Route
                             exact
-                            element={<A4 />}
+                            component={A4}
                             path = { routes.A4 }
                         />
                         <Route
                             exact
-                            element={<B0 />}
+                            component={B0}
                             path = { routes.B0 }
                         />
                         <Route
                             exact
-                            element={<B1 />}
+                            component={B1}
                             path = { routes.B1 }
                         />
                         <Route
                             exact
-                            element={<B2 />}
+                            component={B2}
                             path = { routes.B2 }
                         />
                         <Route
                             exact
-                            element={<V0 />}
+                            component={V0}
                             path = { routes.V0 }
                         />
                         <Route
                             exact
-                            element={<G0 />}
+                            component={G0}
                             path = { routes.G0 }
                         />
                         <Route
                             exact
-                            element={<G1 />}
+                            component={G1}
                             path = { routes.G1 }
                         />
                         <Route
                             exact
-                            element={<G2 />}
+                            component={G2}
                             path = { routes.G2 }
                         />
                         <Route
                             exact
-                            element={<Final />}
+                            component={Final}
                             path = { routes.FINAL }
                         />
-                    </Routes>
-                </CSSTransition>
-            </TransitionGroup>
+                    </Switch>
+                        </CSSTransition>
+                    </TransitionGroup>
+                ) } />
+            </Layout>
         </Router>
     );
 }

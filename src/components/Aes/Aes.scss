@@ -1,12 +1,28 @@
+@import "../../assets/scss/utils/grid.scss";
+
 .aes {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .aes__svg {
     max-width: 100%;
     width: 95%;
-    margin-top: -115px;
+    margin-top: -50px;
+
+    @include xxl {
+        margin-top: 0px;
+        // margin-top: -50px;
+    }
+    @include xl {
+        // margin-top: -220px;
+    }
+    @media (min-width: 2100px) { 
+        // margin-top: -50px;
+    }
+
     & * {
         transition: opacity .3s;
         position: relative;

@@ -4,7 +4,10 @@ import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
 import Layout from '../../components/Layout';
 import { Modal } from '../../components/Modal/Modal';
+import { Structure } from '../../components/Structure';
+import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
+import { VolumeIcon } from '../../components/svg/VolumeIcon';
 import * as routes from '../../const/routes';
 
 import './Map.scss'
@@ -15,9 +18,10 @@ export const Map = () => {
     const [isS3ModalOpened, setIsS3ModalOpened] = useState(false);
     const [isS4ModalOpened, setIsS4ModalOpened] = useState(false);
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
+    const [isStructureOpened, setIsStructureOpened] = useState(false);
 
     return (
-        <Layout>
+        <Fragment>
             <div className='map'>
                 <div className='map__title'>Этапы пусконаладочных работ в структуре АЭС</div>
                 <div className='map__stagetitles'>
@@ -142,13 +146,34 @@ export const Map = () => {
 
             <Footer>
                 <div className='footer__btns'>
-                    <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
+                    
                 </div>
                 <div className='footer__content'>
                     <div className='footer__left'>
+                        <div className='footer__btn-structure short'>
+                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
+                        </div>
                         <div className='footer__btn-steps'>
                             <Link to={routes.MAP}>
                                 <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='footer__right'>
+                        <div className='footer__links'>
+                            <div className='footer__link'>
+                                <Link to={routes.A0}>
+                                    <span>Смотреть далее</span>
+                                    <span>Подэтап А0</span>
+                                </Link>        
+                            </div>
+                        </div>
+                        <div className='footer__pagebuttons'>
+                            <Link to={routes.HOME} className='footer__pagebutton _prev'>
+                                <Button size={ButtonSize.m}><ArrowIcon /></Button>
+                            </Link>
+                            <Link to={routes.A0} className='footer__pagebutton _next'>
+                                <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                         </div>
                     </div>
@@ -164,6 +189,37 @@ export const Map = () => {
                     </div>
                 </div>
             </Modal>
-        </Layout>
+            <Modal isOpened={isS2ModalOpened} onClose={() => {setIsS2ModalOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>Б</span> Этап</div>
+                    <h3>Физпуск</h3>
+                    <div class='text'>
+                        Этап ввода блока АЭС в эксплуатацию, включающий загрузку реактора ядерным топливом, достижение критического состояния реактора и выполнение необходимых физических экспериментов на уровне мощности, при котором теплоотвод от реак4тора осуществляется за счет естественных теплопотерь.
+                    </div>
+                </div>
+            </Modal>
+            <Modal isOpened={isS3ModalOpened} onClose={() => {setIsS3ModalOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>В</span> Этап</div>
+                    <h3>Энергопуск</h3>
+                    <div class='text'>
+                        Ввод АЭС в эксплуатацию от завершения физического пуска реактора до начала выработки электроэнергии.
+                    </div>
+                </div>
+            </Modal>
+            <Modal isOpened={isS4ModalOpened} onClose={() => {setIsS4ModalOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>В</span> Этап</div>
+                    <h3>Опытно-промышленная эксплуатация</h3>
+                    <div class='text'>
+                        Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.
+                    </div>
+                </div>
+            </Modal>
+
+            <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
+                <Structure />
+            </Modal>
+        </Fragment>
     );
 };

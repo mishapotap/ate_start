@@ -11,22 +11,30 @@ import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
+import { Structure } from '../../components/Structure';
 
 const video1 = videos.finalIntro
 const video2 = videos.finalVideo
 
 export const Final = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
+    const [isStructureOpened, setIsStructureOpened] = useState(false);
     const [isIntroEnded, setIsIntroEnded] = useState(false);
-    const video1Ref = useRef(null)
+    const video1Ref = useRef(null);
+
+    useEffect(() => {
+        window.lastStep = routes.FINAL;
+    }, []);
     
     const handleEnded = () => {
-        console.log('!!');
         setIsIntroEnded(true);
     }
 
     return (
-        <Layout>
+        <Fragment>
+             <div class="step-title1">
+                Финал
+            </div>
             <div class="step-title">
                 Промышленная эксплуатация
                 <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
@@ -39,10 +47,13 @@ export const Final = () => {
             </div>
             <Footer>
                 <div className='footer__btns'>
-                    <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
+                     
                 </div>
                 <div className='footer__content'>
                     <div className='footer__left'>
+                        <div className='footer__btn-structure short'>
+                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
+                        </div>
                         <div className='footer__btn-steps'>
                             <Link to={routes.MAP}>
                                 <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
@@ -60,9 +71,9 @@ export const Final = () => {
                             <Link to={routes.G2} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
-                            <Link to={routes.MAP} className='footer__pagebutton _next'>
+                            {/* <Link to={routes.MAP} className='footer__pagebutton _next'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -76,6 +87,10 @@ export const Final = () => {
                     </div>
                 </div>
             </Modal>
-        </Layout>
+
+            <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
+                <Structure />
+            </Modal>
+        </Fragment>
     );
 };

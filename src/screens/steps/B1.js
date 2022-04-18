@@ -1,4 +1,4 @@
-import React, {Component, Fragment, useState} from 'react'
+import React, {Component, Fragment, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
@@ -12,21 +12,34 @@ import { Aes } from '../../components/Aes';
 import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-import ReactorPic from '../../assets/img/reactor.jpg'
+import ReactorPic from '../../assets/img/Scheme-2.gif'
+import { Structure } from '../../components/Structure';
 
 export const B1 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
+    const [isStructureOpened, setIsStructureOpened] = useState(false);
+
+    useEffect(() => {
+        window.lastStep = routes.B1;
+    }, []);
+
     return (
-        <Layout>
+        <Fragment>
+             <div class="step-title1">
+                Подэтап Б1
+            </div>
             <div class="step-title">
             </div>
             <Aes step='b1' />
             <Footer>
                 <div className='footer__btns'>
-                    <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
+                     
                 </div>
                 <div className='footer__content'>
                     <div className='footer__left'>
+                        <div className='footer__btn-structure short'>
+                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
+                        </div>
                         <div className='footer__btn-steps'>
                             <Link to={routes.MAP}>
                                 <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
@@ -57,7 +70,7 @@ export const B1 = () => {
                     </div>
                 </div>
             </Footer>
-            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
+            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}} className='modal_large'>
                 <div>
                     <div className='modal__stage-subtitle'><span>Б1</span> Подэтап</div>
                     <h3>Загрузка реактора ядерным топливом и испытания в подкритическом состоянии</h3>
@@ -85,6 +98,10 @@ export const B1 = () => {
                     </div>
                 </div>
             </Modal>
-        </Layout>
+
+            <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
+                <Structure />
+            </Modal>
+        </Fragment>
     );
 };

@@ -18,7 +18,7 @@ export default class MobilePlaceholder extends Component {
 	setSize = () => {
         const windowWidth = window.innerWidth
         const screenWidth = window.screen.width
-		if (windowWidth < 1900 || screenWidth < 1900) {
+		if (windowWidth < 1359 || screenWidth < 1359) {
 			this.setState({show: true})
 		} else {
 			this.setState({show: false})

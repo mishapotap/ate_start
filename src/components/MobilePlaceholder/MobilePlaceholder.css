@@ -1,12 +1,12 @@
 .mobile-placeholder {
   position: fixed;
   z-index: 1000;
-  background-color: #14708a;
+  background-color: #fff;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  color: #ffffff;
+  color: #263973;
   display: none;
   align-items: center;
   justify-content: center; }
@@ -19,7 +19,7 @@
         padding: 0 20px; } }
   .mobile-placeholder__text {
     padding: 0 60px;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.6em;
     text-align: center; }
     @media (max-width: 1440px) {

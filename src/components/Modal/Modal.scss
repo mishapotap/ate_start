@@ -4,7 +4,7 @@
 .modal-outer {
 	background: inherit;
 	background-size: 0;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -26,6 +26,10 @@
 	box-sizing: border-box;
 	max-height: 96vh;
 	overflow: auto;
+	
+	@include xxl {
+		padding: 30px;
+	}
 
 	.modal-transition-enter & {
 	  opacity: 0;
@@ -44,14 +48,13 @@
 	  transform: translate(0, -40px);
 	}
 
-	.about-screen & {
-		margin-left: -9%;
+	.modal_large & {
+		width: 98%;
+		max-width: 98%;
 	}
-	.mudline-screen & {
-		margin-left: -7%;
-	}
-	.detail-screen & {
-		margin-left: -7%;
+	.size-l & {
+		width: 1400px;
+		max-width: 1400px;
 	}
 }
 
@@ -67,6 +70,21 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	transition: .3s;
+
+	@include xxl {
+		right: 30px;
+		top: 30px;
+	}
+
+	&:hover {
+		background-color: $blue;
+		border-color: $blue;
+
+		& svg * {
+			stroke: #fff;
+		}
+	}
 }
 
 .modal__stage-subtitle {
@@ -91,11 +109,29 @@
 	letter-spacing: 0.14em;
 	text-align: right;
 	padding-top: 93px;
+
+	@include xxl {
+		padding-top: 45px;
+	}
+
+	&:hover a span{
+		text-decoration: underline;
+	}
 }
 
 .modal__link span {
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 16px;
+	color: $primary;
+	&:last-child:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 32px;
+        height: 1px;
+        background: $primary;
+        margin-right: 16px;
+    }
 }
 
 .modal__subtext {
@@ -106,14 +142,25 @@
 .modal__row {
 	display: flex;
 	align-items: center;
+
+	&_block {
+		display: block;
+		& .modal__col_left {
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .modal__col {
-	flex: 0 0 50%;
 	&_left {
+		flex: 0 0 62%;
 		padding-right: 20px;
+		@include xxl {
+			padding-right: 0;
+		}
 	}
 	&_right {
+		flex: 0 0 38%;
 		padding-left: 20px;
 	}
 	& > img {

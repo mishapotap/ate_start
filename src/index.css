@@ -170,6 +170,30 @@ a {
   letter-spacing: 0.1em;
   color: #000000; }
 
+.step-title1 {
+  position: absolute;
+  top: 141px;
+  left: 50px;
+  z-index: 10;
+  font-weight: 300;
+  font-size: 29px;
+  line-height: 34px;
+  text-align: right;
+  letter-spacing: 0.1em;
+  color: #263973; }
+  @media (max-width: 1600px) {
+    .step-title1 {
+      font-size: 24px;
+      top: 80px; } }
+  .step-title1::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 2px;
+    background: #263973;
+    margin-right: 32px; }
+
 .step-title {
   position: absolute;
   top: 141px;
@@ -181,6 +205,11 @@ a {
   text-align: right;
   letter-spacing: 0.1em;
   color: #263973; }
+  @media (max-width: 1600px) {
+    .step-title {
+      font-size: 24px;
+      top: 80px;
+      right: 50px; } }
 
 .step-title__details {
   text-align: right;
@@ -189,7 +218,18 @@ a {
   line-height: 19px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #263973; }
+  color: #263973;
+  cursor: pointer; }
+  .step-title__details::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 121px;
+    height: 1px;
+    background: #263973;
+    margin-right: 12px; }
+  .step-title__details:hover {
+    text-decoration: underline; }
 
 .arrow-btn {
   position: absolute;
@@ -200,6 +240,10 @@ a {
   cursor: pointer;
   z-index: 10;
   transition: .3s; }
+  @media (max-width: 1600px) {
+    .arrow-btn {
+      height: 260px;
+      width: 60px; } }
   .arrow-btn_prev {
     background-image: url(./assets/img/backBg.jpg);
     left: 0; }
@@ -213,6 +257,9 @@ a {
     top: 50%;
     transform: translate(0, -50%);
     transition: .3s; }
+    @media (max-width: 1600px) {
+      .arrow-btn__arrow {
+        transform: scale(0.8); } }
   .arrow-btn_prev .arrow-btn__arrow {
     right: -83px; }
   .arrow-btn_next .arrow-btn__arrow {

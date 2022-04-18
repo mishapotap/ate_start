@@ -1,4 +1,4 @@
-import React, {Component, Fragment, useState} from 'react'
+import React, {Component, Fragment, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
@@ -13,11 +13,22 @@ import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
 import ReactorPic from '../../assets/img/reactor.jpg'
+import { Power } from '../../components/Power';
+import { Structure } from '../../components/Structure';
 
 export const G1 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
+    const [isStructureOpened, setIsStructureOpened] = useState(false);
+
+    useEffect(() => {
+        window.lastStep = routes.G1;
+    }, []);
+
     return (
-        <Layout>
+        <Fragment>
+             <div class="step-title1">
+                Подэтап Г1
+            </div>
             <div class="step-title">
                 Освоение мощности
                 <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
@@ -25,10 +36,13 @@ export const G1 = () => {
             <Aes step='g1' />
             <Footer>
                 <div className='footer__btns'>
-                    <Button size={ButtonSize.m} onClick={() => {setIsStepModalOpened(true)}}><QuestionIcon /></Button>
+                     
                 </div>
                 <div className='footer__content'>
                     <div className='footer__left'>
+                        <div className='footer__btn-structure short'>
+                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
+                        </div>
                         <div className='footer__btn-steps'>
                             <Link to={routes.MAP}>
                                 <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
@@ -59,7 +73,7 @@ export const G1 = () => {
                     </div>
                 </div>
             </Footer>
-            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
+            <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}} className='size-l'>
                 <div>
                     <div className='modal__stage-subtitle'><span>Г1</span> Подэтап</div>
                     <h3>Освоение мощности</h3>
@@ -69,7 +83,10 @@ export const G1 = () => {
                             Номинальная мощность (номинальный уровень) – это 100% проектная мощность реактора.
                         </div>
                         <ol>
-                            <li>Освоение 50% номинального уровня мощности</li>
+                            <li>
+                                Освоение 50% номинального уровня мощности
+                                <Power percent={50} />
+                            </li>
                             <li>Нейтронно-физические эксперименты;</li>
                             <li>Теплогидравлические и теплофизические эксперименты;</li>
                             <li>Испытание систем и оборудования турбины и других систем с выведенной УПЗ (ускоренной предупредительной защитой);</li>
@@ -86,6 +103,7 @@ export const G1 = () => {
                             <li>Выполняется проверка биологической защиты, проверяется радиационная обстановка в помещениях АЭС и за ее пределами.</li>
                             <li>
                                 Освоение 75% номинального уровня мощности
+                                <Power percent={75} />
                                 <ul>
                                     <li>Испытания аналогичные уровню мощности 50% Nом за исключением – не делается испытание по полному обесточению блока.</li>
                                 </ul>
@@ -106,6 +124,10 @@ export const G1 = () => {
                     </div>
                 </div>
             </Modal>
-        </Layout>
+
+            <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
+                <Structure />
+            </Modal>
+        </Fragment>
     );
 };

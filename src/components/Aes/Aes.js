@@ -12,7 +12,9 @@ import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import './Aes.scss'
 import { AesSvg } from './svg/AesSvg';
 
-import ReactorPic from '../../assets/img/reactor.jpg'
+import ReactorPic1 from '../../assets/img/Scheme-2.gif'
+import ReactorPic2 from '../../assets/img/Scheme-3.gif'
+import ReactorPic3 from '../../assets/img/Scheme-4.gif'
 import { Modal } from '../Modal/Modal';
 
 export const Aes = (props) => {
@@ -87,12 +89,14 @@ export const Aes = (props) => {
             <Modal isOpened={isPumpOpened} onClose={() => {setIsPumpOpened(false)}}>
                 <div>
                     <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
-                    <h3>Блочная насосная станция</h3>
+                    <h3>Градирня</h3>
                     <div class='text'>
+                        Градирня (охладительная башня)-устройство для охлаждения большого количества воды направленным потоком атмосферного воздуха.
                     </div>
                 </div>
             </Modal>
-            <Modal isOpened={isRdesOpened} onClose={() => {setIsRdesOpened(false)}}>
+
+            <Modal isOpened={isRdesOpened && step !== 'a3'} onClose={() => {setIsRdesOpened(false)}}>
                 <div>
                     <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
                     <h3>РДЭС/БДЭС (UBN)</h3>
@@ -101,6 +105,16 @@ export const Aes = (props) => {
                     </div>
                 </div>
             </Modal>
+            <Modal isOpened={isRdesOpened && step === 'a3'} onClose={() => {setIsRdesOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>А3</span> Подэтап</div>
+                    <h3>Гидравлические испытания и циркуляционная промывка первого контура</h3>
+                    <div class='text'>
+                        Выполняются гидравлические испытания первого контура и парогенераторов по второму контуру на плотность (3,2 МПа и 1,96 МПа), наработка ГЦНА (гшлавный циркуляционный насосный агрегат), комплексные испытания систем безопасности, наладка и поддержания водно-химического режима РУ (реакторной установки), первого контура и парогенератора. Выполняется циркуляционная промывка первого контура.
+                    </div>
+                </div>
+            </Modal>
+
             <Modal isOpened={isElectric1Opened} onClose={() => {setIsElectric1Opened(false)}}>
                 <div>
                     <div className='modal__stage-subtitle'><span>А0</span> Подэтап</div>
@@ -139,7 +153,7 @@ export const Aes = (props) => {
             </Modal>
 
             <Modal 
-                isOpened={isReactorOpened && step !== 'a3' && step !== 'a4' && step !== 'b1'} 
+                isOpened={isReactorOpened && step !== 'a2' && step !== 'a3' && step !== 'a4' && step !== 'b1' && step !== 'b2'} 
                 onClose={() => {setIsReactorOpened(false)}}
             >
                 <div>
@@ -147,6 +161,25 @@ export const Aes = (props) => {
                     <h3>Здание реактора (UJA)</h3>
                     <div class='text'>
                         Выполняется разборка реактора после ХГО, ревизия оборудования РУ и первого контура, оценка технического состояния после испытаний на ХГО. Выполняется подготовка грузо-подъемного и транспортно-технологического оборудования к загрузке ядерного топлива в реактор. Выполняются борным промывки реактора, систем первого контура и систем безопасности. Заканчиваются проверки и испытания систем АСУ ТП, ответственных за контроль работы реактора (АКНП, СУЗ, СВРК, СПНИ и тд). Энергоблок проходит проверку готовности регулирующими контролирующими органами и получает разрешение на начало загрузки ядерного топлива и физического пуска реактора.
+                    </div>
+                </div>
+            </Modal>
+            <Modal isOpened={isReactorOpened && step === 'a2'} onClose={() => {setIsReactorOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>А2</span> Подэтап</div>
+                    <h3>Испытания СГО (Система герметичных охлаждений)</h3>
+                    <div class='text'>
+                        <div className='modal__subtext'>
+                            Проверяется плотность и прочность герметичных ограждений (внутренней защитной оболочки).
+                        </div>
+                        <p>Проводится проверка герметичного ограждения на прочность и герметичность, выполняется замер утечек из гермоограждения, выполняется замеры и анализ динамики фактического напряженно-деформированного состояния конструкций защитной оболочки.</p>
+                        <p><b>Герметичное ограждение</b> – совокупность элементов строительных и других конструкций, которые ограждают пространство вокруг реакторной установки или другого объекта, содержащего радиоактивные вещества и образуют предусмотренную проектом границу и препятствуют распространению радиоактивных веществ.</p>
+                    </div>
+                    <div className='modal__link'>
+                        <Link to={routes.A3}>
+                            <span>Смотреть далее</span>
+                            <span>Подэтап А3</span>
+                        </Link>
                     </div>
                 </div>
             </Modal>
@@ -174,13 +207,28 @@ export const Aes = (props) => {
                     </div>
                 </div>
             </Modal>
-            <Modal isOpened={isReactorOpened && step === 'b1'} onClose={() => {setIsReactorOpened(false)}}>
+            <Modal isOpened={isReactorOpened && step === 'b0'} onClose={() => {setIsReactorOpened(false)}}>
+                <div>
+                    <div className='modal__stage-subtitle'><span>Б</span> Этап</div>
+                    <h3>Физический пуск</h3>
+                    <div class='text'>
+                        Этап ввода блока АЭС в эксплуатацию, включающий загрузку реактора ядерным топливом, достижение критического состояния реактора и выполнение необходимых физических экспериментов на уровне мощности, при котором теплоотвод от реак4тора осуществляется за счет естественных теплопотерь.
+                    </div>
+                    <div className='modal__link'>
+                        <Link to={routes.B1}>
+                            <span>Смотреть далее</span>
+                            <span>Подэтап Б1</span>
+                        </Link>
+                    </div>
+                </div>
+            </Modal>
+            <Modal isOpened={isReactorOpened && step === 'b1'} onClose={() => {setIsReactorOpened(false)}} className='modal_large'>
                 <div>
                     <div className='modal__stage-subtitle'><span>А3.2</span> Подэтап</div>
                     <h3>Загрузка реактора ядерным топливом и испытания в подкритическом состоянии</h3>
                     <div className='modal__row'>
                         <div className='modal__col modal__col_left'>
-                            <img src={ReactorPic} alt='' /> 
+                            <img src={ReactorPic1} alt='' /> 
                         </div>
                         <div className='modal__col modal__col_right'>
                             <div class='text'>
@@ -198,6 +246,34 @@ export const Aes = (props) => {
                         <Link to={routes.B2}>
                             <span>Смотреть далее</span>
                             <span>Подэтап Б2</span>
+                        </Link>
+                    </div>
+                </div>
+            </Modal>
+            <Modal isOpened={isReactorOpened && step === 'b2'} onClose={() => {setIsReactorOpened(false)}} className='modal_large'>
+                <div>
+                    <div className='modal__stage-subtitle'><span>Б2</span> Подэтап</div>
+                    <h3>Вывод реактора на МКУ</h3>
+                    <div className='modal__row_block'>
+                        <div className='modal__col modal__col_left'>
+                            <img src={ReactorPic2} alt='' /> 
+                        </div>
+                        <div className='modal__col modal__col_right'>
+                            <div class='text'>
+                                <div className='modal__subtext'>Достижение критического состояния реактора и выполнение физических экспериментов на МКУ (мин. контролируемый уровень мощности)</div>
+                                <ul>
+                                    <li>Первый вывод реактора в критическое состояние (управляемая ядерная реакция);</li>
+                                    <li>Проводятся физические испытания и подтверждаются нейтронно-физические характеристики активной зоны</li>
+                                    <li>Комплексная проверка АКНП (аппаратура контроля нейтронного потока), СУЗ (система управления и защиты), защит и блокировок, в т.ч. проверка правильного функционирования систем АСУ ТП и систем контроля нейтронной мощности, в том числе тарировка измерителей</li>
+                                    <li>Физические эксперименты на мощности до 1% от номинальной.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='modal__link'>
+                        <Link to={routes.V0}>
+                            <span>Смотреть далее</span>
+                            <span>Подэтап В</span>
                         </Link>
                     </div>
                 </div>
