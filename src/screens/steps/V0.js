@@ -74,7 +74,7 @@ export const V0 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}} className='modal_large'>
                 <div>
-                    <div className='modal__stage-subtitle'><span>В</span> Этап</div>
+                    <div className='modal__stage-subtitle'><div>В</div>этап</div>
                     <h3>Энергетический пуск</h3>
                     <div className='modal__row'>
                         <div className='modal__col modal__col_left'>

@@ -54,12 +54,12 @@ export const A4 = () => {
                             <div className='footer__link'>
                                 <Link to={routes.B0}>
                                     <span>Смотреть далее</span>
-                                    <span>Подэтап А5</span>
+                                    <span>Подэтап Б</span>
                                 </Link>        
                             </div>
                         </div>
                         <div className='footer__pagebuttons'>
-                            <Link to={routes.A2} className='footer__pagebutton _prev'>
+                            <Link to={routes.A3} className='footer__pagebutton _prev'>
                                 <Button size={ButtonSize.m}><ArrowIcon /></Button>
                             </Link>
                             <Link to={routes.B0} className='footer__pagebutton _next'>
@@ -71,7 +71,7 @@ export const A4 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А4</span> Подэтап</div>
+                    <div className='modal__stage-subtitle'><div>А4</div>подэтап</div>
                     <h3>Ревизия основного оборудования</h3>
                     <div class='text'>
                         <div className='modal__subtext'>Подэтап, в течение которого производятся ревизия основного оборудования после ХГО.</div>
@@ -85,7 +85,7 @@ export const A4 = () => {
                     <div className='modal__link'>
                         <Link to={routes.B0}>
                             <span>Смотреть далее</span>
-                            <span>Подэтап А5</span>
+                            <span>Подэтап Б0</span>
                         </Link>
                     </div>
                 </div>

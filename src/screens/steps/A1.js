@@ -72,7 +72,7 @@ export const A1 = () => {
             </Footer>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
-                    <div className='modal__stage-subtitle'><span>А1</span> Подэтап</div>
+                    <div className='modal__stage-subtitle'><div>А1</div>подэтап</div>
                     <h3>Испытания и опробование оборудования</h3>
                     <div class='text'>
                         <div className='modal__subtext'>
