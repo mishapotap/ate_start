@@ -15,8 +15,14 @@ import Logo1 from '../../assets/img/s-logo1.png'
 import Logo2 from '../../assets/img/s-logo2.png'
 import Logo3 from '../../assets/img/s-logo3.png'
 import Logo4 from '../../assets/img/s-logo4.png'
+
+import { Structure1, Structure2, Structure3  } from '../../assets/img/Structure';
 import PartnersSvg from '../../assets/img/partners.svg'
 import RotateSvg from '../../assets/img/Rotate.svg'
+import { Ellipse } from '../svg/Ellipse'
+import Icon1 from "../../assets/img/Map/structure_icon1.png";
+import Icon2 from "../../assets/img/Map/structure_icon2.png";
+import Icon3 from "../../assets/img/Map/structure_icon3.png";
 
 export const Structure = () => {
     const [videoEnded, setVideoEnded] = useState(false);
@@ -35,53 +41,61 @@ export const Structure = () => {
         setScroll(0);
     }
 
+    const setActiveClass = (e) => {
+        const slides = document.querySelectorAll(".structure__stage");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        e.currentTarget.classList.add("active");
+    }
+    
     return (
         <div className='structure'>
             <div className='structure__title'>Положение АТЭ в структуре создания АЭС</div>
             <div className='structure__stages'>
-                <div className='structure__stage'>
-                    Строительно-монтажные <br />
-                    и электромонтажные работы
+                <div className="structure__stage active" onClick={setActiveClass}>
+                    <div className='structure__image__wrapper' style={{backgroundImage: `url(${Structure1})`}}>
+                        <img src={Icon1} alt="Slide icon" />
+                    </div>
+                    <div className='structure__text'>Строительно-монтажные и электромонтажные работы</div>
+                    <div className='structure__line'>
+                        <Ellipse/>
+                    </div>
+                    {/* <div style={{display: "flex", justifyContent: "flex-end"}}> */}
+                    {/* </div> */}
                     <div className='structure__logos'>
                         <div><img src={Logo1} alt='' style={{width: '117px'}} /></div>
                         <div><img src={Logo2} alt='' style={{width: '118px'}} /></div>
                         <div className='_text'>и др.</div>
                     </div>
                 </div>
-                <div className='structure__stage'>
-                    <div className="structure__mid">
-                        <img src={RotateSvg} alt='' />
-                        <i></i>
+                <div className="structure__stage" onClick={setActiveClass}>
+                    <div className='structure__image__wrapper' style={{backgroundImage: `url(${Structure2})`}}>
+                        <img src={Icon2} alt="Slide icon" />
                     </div>
-                </div>
-                <div className='structure__stage'>
-                    ПНР и ввод <br />
-                    в эксплуатацию
+                    <div className='structure__text'>ПНР и ввод в эксплуатацию</div>
+                    <div className='structure__line'>
+                        <Ellipse/>
+                    </div>
                     <div className='structure__logos'>
                         <div><img src={Logo3} alt='' style={{width: '137px'}} /></div>
                     </div>
                 </div>
-                <div className='structure__stage'>
-                    <div className="structure__mid">
-                        <img src={RotateSvg} alt='' />
-                        <i></i>
+                <div className="structure__stage" onClick={setActiveClass}>
+                    <div className='structure__image__wrapper' style={{backgroundImage: `url(${Structure3})`}}>
+                        <img src={Icon3} alt="Slide icon" />
                     </div>
-                </div>
-                <div className='structure__stage structure__stage_3'>
-                    Эксплуатация 
+                    <div className='structure__text'>Эксплуатация</div>
+                    <div className='structure__line'>
+                        <Ellipse/>
+                    </div>
                     <div className='structure__logos'>
                         <div><img src={Logo4} alt='' style={{width: '126px'}} /></div>
                         <div className='_text'>Инозаказчик</div>
                     </div>
                 </div>
             </div>
-            <div className='structure__partners' ref={logosRef}>
-                <div className='structure__arrow prev' onClick={handlePrev}><ArrowIcon1 /></div>
-                <div className='structure__arrow next' onClick={handleNext}><ArrowIcon1 /></div>
-                <div className='structure__partners-inner' ref={logosInnerRef} style={{left: `${scroll}px`}}>
-                    <img src={PartnersSvg} alt='' ref={logosImgRef} />
-                </div>
-            </div>
+            {/* <div className='structure__line'></div> */}
         </div>
     );
 };

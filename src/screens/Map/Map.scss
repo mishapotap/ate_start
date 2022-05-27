@@ -1,185 +1,278 @@
 @import '../../assets/scss/base/colors';
 @import "../../assets/scss/utils/grid.scss";
 
-.map {
-    padding: 35px 30px;
+
+.a0 svg circle{
+    stroke: #4EA4D9;
 }
+.a svg circle{
+    stroke: #22952E;
+}
+.b svg circle{
+    stroke: #70A1E9;
+}
+.v svg circle{
+    stroke: #5874C8;
+}
+.g svg circle{
+    stroke: #621F97;
+}
+.page {
+    position: absolute;
+    width: 100%;
+	height: 100%;
+}
+
 .map__title {
+    margin-top: 89px;
+    padding-top: 55px;
+    padding-left: 15.5vw;
+    padding-bottom: 40px;
     font-weight: 300;
     font-size: 40px;
-    line-height: 53px;
+    // line-height: 53px;
     letter-spacing: 0.1em;
     color: #263973;
-    margin-bottom: 114px;
-
     @include xxl {
         font-size: 27px;
-        line-height: 1.2em;
-        margin-bottom: 35px;
+        padding-top: 0px;
+        padding-bottom: 35px;
     }
 }
-.map__line {
-    border-top: 3px solid #263973;
+// Обертка слайда
+// Обертка img
+.map__slide {
+    display: flex;
     position: relative;
-    margin-left: 30px;
+    width: 68vw;
+    height: 36vh;
+    &__image {
+        transition: all 1s ease;
+        align-self: flex-end;
+        cursor: pointer;
+        &:hover { 
+          transform: scale(1.025);
+        }
+    }
+    &__icon {
+        position: absolute;
+        width: 84px;
+        height: 84px;
+        top: 30px;
+        right: 30px;
+        z-index: 1;
+    }
 }
-.map__step {
+// СТРЕЛКИ 
+// Левая стрелка
+.navigation_prev_arrow {
     position: absolute;
-    top: 0;
-    display: block;
-}
-.map__point {
-    width: 8px;
-    height: 8px;
-    border-radius: 10px;
-    border: 4px solid #263973;
-    background: #fff;
-    position: relative;
-    top: -9px;
-    transition: .3s;
-
-    &_final {
-        background: #263973;
+    top: 19vh;
+    left: 2.5vw;
+    width: 134px;
+    height: 94px;
+    &::after {
+      display: none;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+    svg:hover path {
+    stroke: #2D74AD;
+    }
+    svg:active path {
+    stroke: #1A588B;
     }
 }
-.map__step:hover .map__point {
-    background: #263973;
-}
-.map__step-name {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 30px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #263973;
-    position: relative;
-    top: -60px;
-}
-
-.map__step-desc {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.03em;
-    color: #A7A7A7;
-    max-width: 200px;
-    margin-top: -8px;
-    transition: .3s;
-
-    &_bottom {
-        padding-top: 90px;
+// // Правая стрелка
+.navigation_next_arrow {
+    position: absolute;
+    top: 19vh;
+    right: 2.5vw;
+    width: 134px;
+    height: 94px;
+    &::after {
+      display: none;
     }
+    svg:hover path {
+    stroke: #2D74AD;
+    }
+    svg:active path {
+    stroke: #1A588B;
+    }
+}
 
-    &_final {
+
+// Обертка Этап + Текст + Подробнее
+.event {
+    display: flex;
+    justify-content: flex-start;
+    width: 1300px;
+    height: 60px;
+    margin-top: 35px;
+    // Этап 0
+    &__number {
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 47px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        margin-right: 45px;
+    }
+    // Подготовительный этап
+    &__title {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        margin-bottom: 13px;
+        cursor: pointer;
+        &:hover {
+            color: #1A588B;
+          }
+          &:active {
+            color: #263973;
+          }
+    }
+    // Подробнее
+    &__moreinfo {
         position: relative;
-        width: 220px;
-        max-width: 220px;
-        left: -209px;
-        text-align: right;
-
-        @include xxl {
-            left: -152px;
-            max-width: 200px;
+        margin-left: 130px;
+        display: block;
+        width: 203px;
+        height: 19px;
+        cursor: pointer;
+        /* text */
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 19px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #000000;
+        &:hover {
+            color: #1A588B;
+            &:before {
+                background-color: #1A588B;
+            }
+        }
+        &:active {
+            color: #263973;
+            &:before {
+                background-color: #263973;
+            }
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 120px;
+            height: 1px;
+            background-color: #000000;
+            bottom: 5px;
+            left: -130px;
         }
     }
-
-    & > div {
-        // color: #263973;
-        padding-top: 12px;
-    }
-
-    @include xxl {
-        margin-top: -19px;
-        font-size: 12px;
-        line-height: 1.2em;
-        max-width: 160px;
-    }
-}
-.map__step:hover .map__step-desc {
-    color: #263973;
 }
 
-.map__stage {
-    position: absolute;
-    top: -18px;
-    font-weight: 900;
-    font-size: 21px;
-    line-height: 30px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #D0D0D0;
-    transform: rotate(-90deg);
-    transform-origin: 0% 50%;
-    background: #fff;
-    padding-bottom: 12px;
-    padding-top: 2px;
-
-    @include xxl {
+.line {
+    // position: relative;
+    margin-top: 50px;
+    width: 77vw;
+    height: 6px;
+    &__etap {
+        position: absolute;
+        left: -95px;
+        bottom: 93px;
+        font-weight: 900;
         font-size: 18px;
-        line-height: 1.3em;
-        top: -13px;
-    }
-
-    & > b {
-        color: #263973;
-    }
-}
-
-.map__stagetitles {
-    position: relative;
-    padding-bottom: 170px;
-    margin: 0 4px;
-}
-.map__stagetitle {
-    position: absolute;
-    top: 0;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0.1em;
-    color: #263973;
-    white-space: nowrap;
-    
-    @include xxl {
-        font-size: 16px;
-        line-height: 1.2em;
-        white-space: initial;
-    }
-
-    & > div {
-        margin-bottom: 12px;
-        @include xxl {
-            min-height: 38px;
+        letter-spacing: 0.1em;
+        &__prev {
+            position: absolute;
+            left: -200px;
+            bottom: 93px;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            // color: #4EA4D9;
+            &__before {
+                display: block;
+                position: absolute;
+                width: 33px;
+                height: 3px;
+                // background-color: #4EA4D9;
+                bottom: 9px;
+                left: -40px;
+            }
+        }
+        &__next {
+            position: absolute;
+            left: 78vw;
+            bottom: 93px;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            // color: #263973;
+            &__before {
+                display: block;
+                position: absolute;
+                width: 33px;
+                height: 3px;
+                // background-color: #263973;
+                bottom: 9px;
+                left: 80px;
+            }
         }
     }
-}
-
-.stage-button {
-    height: 46px;
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    border: 1px solid rgba(196, 196, 196, 0.6);
-    box-sizing: border-box;
-    border-radius: 104px;
-    font-weight: 900;
-    font-size: 9px;
-    line-height: 28px;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    color: #000;
-    padding: 10px 30px;
-    cursor: pointer;
-    transition: .3s;
-    &:hover {
-        background: $blue;
-        border-color: $blue;
-        color: $white;
+    &__number {
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
-
-    @include xxl {
-        height: 34px;
-        font-size: 8px;
-        padding: 6px 17px;
+    &__event__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        width: 77vw;
+        height: 100px;
+    }
+    &__event {
+        margin-top: -11px;
+        cursor: pointer;
+        // width: 25%;
+        &:hover .a0 svg circle {
+            transition: 0.3s all linear;
+            fill: #4EA4D9;
+        }
+        &:hover .a svg circle {
+            transition: 0.3s all linear;
+            fill: #22952E;
+        }
+        &:hover .b svg circle {
+            transition: 0.3s all linear;
+            fill: #70A1E9;
+        }
+        &:hover .v svg circle {
+            transition: 0.3s all linear;
+            fill: #5874C8;
+        }
+        &:hover .g svg circle {
+            transition: 0.3s all linear;
+            fill: #621F97;
+        }
+    }
+    &__event__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        color: #000000;
+    }
+    &__event__name {
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
 }

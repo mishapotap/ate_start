@@ -19,13 +19,11 @@
     padding: 10px; }
   .button.size_m {
     min-height: 65px;
-    padding: 12px 22px;
     font-weight: 700;
     font-size: 11px; }
     @media (max-width: 1600px) {
       .button.size_m {
         min-height: 40px;
-        padding: 3px 11px;
         font-size: 9px; } }
   .button:hover svg * {
     stroke: #ffffff; }
@@ -41,6 +39,18 @@
       background: #1A588B;
       border-color: #1A588B;
       color: #ffffff; }
+  .button.theme_white {
+    border: 1px solid #ffffff;
+    color: #000000;
+    background: #53A9DE;
+    text-transform: none;
+    font-size: 13px; }
+    .button.theme_white:hover {
+      background: #2D74AD;
+      border-color: #2D74AD; }
+    .button.theme_white:active {
+      background: #1A588B;
+      border-color: #1A588B; }
   .button.disabled {
     color: #A7A7A7;
     border-color: #A7A7A7;

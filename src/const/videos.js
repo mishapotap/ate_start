@@ -9,6 +9,12 @@ export const video11 = {
     title: '',
     name:  '',
 };
+export const video4 = {
+    file:  prefixWithoutLocale + '1.4.mp4',
+    // vimeo_id: '376568191',
+    title: '',
+    name:  '',
+};
 export const finalIntro = {
     file:  prefixWithoutLocale + '1.2.mp4',
     // vimeo_id: '376568191',

@@ -24,51 +24,39 @@ export const G2 = () => {
     }, []);
 
     return (
-        <Fragment>
-             <div class="step-title1">
-                Подэтап Г2
+        <div className='page'>
+            <div className='step-wrapper'>
+                <div class="step-title">Комплексное опробование блока АЭС на номинальной мощности</div>
+                <div class="step-title1">Подэтап Г2</div>
             </div>
-            <div class="step-title">
-                Комплексное опробование блока АЭС на номинальной мощности
-                <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
-            </div>
+            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='g2' />
             <Footer>
                 <div className='footer__btns'>
                      
                 </div>
                 <div className='footer__content'>
-                    <div className='footer__left'>
-                        <div className='footer__btn-structure short'>
-                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
-                        </div>
-                        <div className='footer__btn-steps'>
-                            <Link to={routes.MAP}>
-                                <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
-                            </Link>
-                        </div>
+                    <div className='footer__middle'>
+                        <Link to={routes.G1} className='footer__pagebutton _prev'>
+                            <Button theme="white" size={ButtonSize.m}>
+                                <ArrowIcon />
+                                Подэтап Г1
+                            </Button>
+                        </Link>
+                        <Link to={routes.MAP} className='footer__pagebutton _middle'>
+                            <Button size={ButtonSize.m}>
+                                Этапы пусконаладочных работ
+                            </Button>
+                        </Link>
+                        <Link to={routes.FINAL} className='footer__pagebutton _next'>
+                            <Button theme="white" size={ButtonSize.m}>
+                                Финал
+                                <ArrowIcon />
+                            </Button>
+                        </Link>
                     </div>
                     <div className='footer__right'>
-                        <div className='footer__links'>
-                            <div className='footer__title'>
-                                Комплексное опробование блока АЭС на номинальной мощности
-                                <b>Подэтап Г2</b>
-                            </div>
-                            <div className='footer__link'>
-                                <Link to={routes.FINAL}>
-                                    <span>Смотреть далее</span>
-                                    <span>Промышленная эксплуатация</span>
-                                </Link>        
-                            </div>
-                        </div>
-                        <div className='footer__pagebuttons'>
-                            <Link to={routes.G1} className='footer__pagebutton _prev'>
-                                <Button size={ButtonSize.m}><ArrowIcon /></Button>
-                            </Link>
-                            <Link to={routes.FINAL} className='footer__pagebutton _next'>
-                                <Button size={ButtonSize.m}><ArrowIcon /></Button>
-                            </Link>
-                        </div>
+                        <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>ПНР в структуре создания АЭС</Button>
                     </div>
                 </div>
             </Footer>
@@ -97,6 +85,6 @@ export const G2 = () => {
             <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
                 <Structure />
             </Modal>
-        </Fragment>
+        </div>
     );
 };

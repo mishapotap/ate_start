@@ -220,13 +220,13 @@ export const AesSvg = (props) => {
 </defs>
 
 
-<rect x="460" y="101" width="284" height="458" fill="transparent" 
+<rect x="460" y="101" width="284" height="400" fill="transparent" 
     style={{cursor: 'pointer', visibility: (isCommonVisible) ? 'visible' : 'hidden'}}
     onMouseEnter={() => {setIsPumpAActive(true)}}
     onClick={handlePumpClick}
     onMouseLeave={() => {setIsPumpAActive(false)}}
 />
-<rect x="670" y="501" width="150" height="40" fill="transparent" 
+<rect x="600" y="460" width="110" height="40" fill="transparent" 
     style={{cursor: 'pointer', visibility: (isCommonVisible) ? 'visible' : 'hidden'}}
     onMouseEnter={() => {setIsPumpAActive(true)}}
     onClick={handlePumpClick}
@@ -258,7 +258,7 @@ export const AesSvg = (props) => {
     onClick={handleElectric2Click}
     onMouseLeave={() => {setIsElectric2Active(false)}}
 />
-<rect x="520" y="770" width="200" height="40" fill="transparent" 
+<rect x="520" y="770" width="200" height="30" fill="transparent" 
     style={{cursor: 'pointer', visibility: (isCommonVisible) ? 'visible' : 'hidden'}}
     onMouseEnter={() => {setIsElectric2Active(true)}}
     onClick={handleElectric2Click}
@@ -304,7 +304,8 @@ export const AesSvg = (props) => {
     onClick={handleCleaning2Click}
     onMouseLeave={() => {setIsCleaning2Active(false)}}
 />
-<rect x="1375" y="725" width="170" height="40" fill="transparent" style={{cursor: 'pointer', visibility: step === 'a3' ? 'hidden' :  'visible'}}
+<rect x="1375" y="725" width="170" height="40" fill="transparent" 
+    style={{cursor: 'pointer', visibility: (isCommonVisible) ? 'visible' : 'hidden'}}
     onMouseEnter={() => {setIsCleaning2Active(true)}}
     onClick={handleCleaning2Click}
     onMouseLeave={() => {setIsCleaning2Active(false)}}
@@ -329,8 +330,34 @@ export const AesSvg = (props) => {
     onClick={handleReactorClick}
     onMouseLeave={() => {setIsReactorActive(false)}}
 />
-<rect x="1070" y="162" width="430" height="100" fill="transparent" 
-    style={{cursor: 'pointer', visibility: 'visible'}}
+{/* Маленькая надпись (Центральный реактор)*/}
+<rect x="1070" y="222" width="170" height="40" fill="transparent" 
+    style={{cursor: 'pointer', visibility: 
+    (isCommonVisible || step === 'b0' || step === 'v0') ? 'visible' : 'hidden'}}
+    onMouseEnter={() => {setIsReactorActive(true)}}
+    onClick={handleReactorClick}
+    onMouseLeave={() => {setIsReactorActive(false)}}
+/>
+{/* А2 (Центральный реактор)*/}
+<rect x="1100" y="200" width="430" height="60" fill="transparent" 
+    style={{cursor: 'pointer', visibility: step === 'a2' ? 'visible' : 'hidden'}}
+    onMouseEnter={() => {setIsReactorActive(true)}}
+    onClick={handleReactorClick}
+    onMouseLeave={() => {setIsReactorActive(false)}}
+/>
+{/* А3 (Центральный реактор)*/}
+<rect x="1080" y="230" width="350" height="40" fill="transparent" 
+    style={{cursor: 'pointer', visibility: step === 'a3' ? 'visible' : 'hidden'}}
+    onMouseEnter={() => {setIsReactorActive(true)}}
+    onClick={handleReactorClick}
+    onMouseLeave={() => {setIsReactorActive(false)}}
+/>
+{/* А4 Б1 Б2 (Центральный реактор)*/}
+<rect x="1140" y="160" width="260" height="60" fill="transparent" 
+    style={{cursor: 'pointer', visibility: 
+    (step === 'a4') ? 'visible' 
+    : (step === 'b1') ? 'visible' 
+    : (step === 'b2') ? 'visible' : 'hidden'}}
     onMouseEnter={() => {setIsReactorActive(true)}}
     onClick={handleReactorClick}
     onMouseLeave={() => {setIsReactorActive(false)}}

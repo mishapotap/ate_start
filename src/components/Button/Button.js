@@ -19,7 +19,7 @@ export const ButtonTheme = {
 export const Button = (props) => {
   const className = cx(
     'button',
-    `theme_${props.theme || 'black'}`,
+    `theme_${props.theme || 'black' || 'white'}`,
     props.size ? `size_${props.size}` : null,
     props.sizeSm ? `sizeSm_${props.sizeSm}` : null,
     props.sizeMd ? `sizeMd_${props.sizeMd}` : null,

@@ -1,157 +1,218 @@
-.map {
-  padding: 35px 30px; }
+.a0 svg circle {
+  stroke: #4EA4D9; }
+
+.a svg circle {
+  stroke: #22952E; }
+
+.b svg circle {
+  stroke: #70A1E9; }
+
+.v svg circle {
+  stroke: #5874C8; }
+
+.g svg circle {
+  stroke: #621F97; }
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
 .map__title {
+  margin-top: 89px;
+  padding-top: 55px;
+  padding-left: 15.5vw;
+  padding-bottom: 40px;
   font-weight: 300;
   font-size: 40px;
-  line-height: 53px;
   letter-spacing: 0.1em;
-  color: #263973;
-  margin-bottom: 114px; }
+  color: #263973; }
   @media (max-width: 1600px) {
     .map__title {
       font-size: 27px;
-      line-height: 1.2em;
-      margin-bottom: 35px; } }
+      padding-top: 0px;
+      padding-bottom: 35px; } }
 
-.map__line {
-  border-top: 3px solid #263973;
+.map__slide {
+  display: flex;
   position: relative;
-  margin-left: 30px; }
+  width: 68vw;
+  height: 36vh; }
+  .map__slide__image {
+    transition: all 1s ease;
+    align-self: flex-end;
+    cursor: pointer; }
+    .map__slide__image:hover {
+      transform: scale(1.025); }
+  .map__slide__icon {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    top: 30px;
+    right: 30px;
+    z-index: 1; }
 
-.map__step {
+.navigation_prev_arrow {
   position: absolute;
-  top: 0;
-  display: block; }
+  top: 19vh;
+  left: 2.5vw;
+  width: 134px;
+  height: 94px; }
+  .navigation_prev_arrow::after {
+    display: none; }
+  .navigation_prev_arrow svg {
+    transform: rotate(180deg); }
+  .navigation_prev_arrow svg:hover path {
+    stroke: #2D74AD; }
+  .navigation_prev_arrow svg:active path {
+    stroke: #1A588B; }
 
-.map__point {
-  width: 8px;
-  height: 8px;
-  border-radius: 10px;
-  border: 4px solid #263973;
-  background: #fff;
-  position: relative;
-  top: -9px;
-  transition: .3s; }
-  .map__point_final {
-    background: #263973; }
+.navigation_next_arrow {
+  position: absolute;
+  top: 19vh;
+  right: 2.5vw;
+  width: 134px;
+  height: 94px; }
+  .navigation_next_arrow::after {
+    display: none; }
+  .navigation_next_arrow svg:hover path {
+    stroke: #2D74AD; }
+  .navigation_next_arrow svg:active path {
+    stroke: #1A588B; }
 
-.map__step:hover .map__point {
-  background: #263973; }
-
-.map__step-name {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 30px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #263973;
-  position: relative;
-  top: -60px; }
-
-.map__step-desc {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.03em;
-  color: #A7A7A7;
-  max-width: 200px;
-  margin-top: -8px;
-  transition: .3s; }
-  .map__step-desc_bottom {
-    padding-top: 90px; }
-  .map__step-desc_final {
+.event {
+  display: flex;
+  justify-content: flex-start;
+  width: 1300px;
+  height: 60px;
+  margin-top: 35px; }
+  .event__number {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-right: 45px; }
+  .event__title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 13px;
+    cursor: pointer; }
+    .event__title:hover {
+      color: #1A588B; }
+    .event__title:active {
+      color: #263973; }
+  .event__moreinfo {
     position: relative;
-    width: 220px;
-    max-width: 220px;
-    left: -209px;
-    text-align: right; }
-    @media (max-width: 1600px) {
-      .map__step-desc_final {
-        left: -152px;
-        max-width: 200px; } }
-  .map__step-desc > div {
-    padding-top: 12px; }
-  @media (max-width: 1600px) {
-    .map__step-desc {
-      margin-top: -19px;
-      font-size: 12px;
-      line-height: 1.2em;
-      max-width: 160px; } }
+    margin-left: 130px;
+    display: block;
+    width: 203px;
+    height: 19px;
+    cursor: pointer;
+    /* text */
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 19px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #000000; }
+    .event__moreinfo:hover {
+      color: #1A588B; }
+      .event__moreinfo:hover:before {
+        background-color: #1A588B; }
+    .event__moreinfo:active {
+      color: #263973; }
+      .event__moreinfo:active:before {
+        background-color: #263973; }
+    .event__moreinfo:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 120px;
+      height: 1px;
+      background-color: #000000;
+      bottom: 5px;
+      left: -130px; }
 
-.map__step:hover .map__step-desc {
-  color: #263973; }
-
-.map__stage {
-  position: absolute;
-  top: -18px;
-  font-weight: 900;
-  font-size: 21px;
-  line-height: 30px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #D0D0D0;
-  transform: rotate(-90deg);
-  transform-origin: 0% 50%;
-  background: #fff;
-  padding-bottom: 12px;
-  padding-top: 2px; }
-  @media (max-width: 1600px) {
-    .map__stage {
+.line {
+  margin-top: 50px;
+  width: 77vw;
+  height: 6px; }
+  .line__etap {
+    position: absolute;
+    left: -95px;
+    bottom: 93px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.1em; }
+    .line__etap__prev {
+      position: absolute;
+      left: -200px;
+      bottom: 93px;
+      font-weight: 900;
       font-size: 18px;
-      line-height: 1.3em;
-      top: -13px; } }
-  .map__stage > b {
-    color: #263973; }
-
-.map__stagetitles {
-  position: relative;
-  padding-bottom: 170px;
-  margin: 0 4px; }
-
-.map__stagetitle {
-  position: absolute;
-  top: 0;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: 0.1em;
-  color: #263973;
-  white-space: nowrap; }
-  @media (max-width: 1600px) {
-    .map__stagetitle {
-      font-size: 16px;
-      line-height: 1.2em;
-      white-space: initial; } }
-  .map__stagetitle > div {
-    margin-bottom: 12px; }
-    @media (max-width: 1600px) {
-      .map__stagetitle > div {
-        min-height: 38px; } }
-
-.stage-button {
-  height: 46px;
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
-  border: 1px solid rgba(196, 196, 196, 0.6);
-  box-sizing: border-box;
-  border-radius: 104px;
-  font-weight: 900;
-  font-size: 9px;
-  line-height: 28px;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-  color: #000;
-  padding: 10px 30px;
-  cursor: pointer;
-  transition: .3s; }
-  .stage-button:hover {
-    background: #2D74AD;
-    border-color: #2D74AD;
-    color: #ffffff; }
-  @media (max-width: 1600px) {
-    .stage-button {
-      height: 34px;
-      font-size: 8px;
-      padding: 6px 17px; } }
+      letter-spacing: 0.1em; }
+      .line__etap__prev__before {
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        bottom: 9px;
+        left: -40px; }
+    .line__etap__next {
+      position: absolute;
+      left: 78vw;
+      bottom: 93px;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      white-space: nowrap; }
+      .line__etap__next__before {
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        bottom: 9px;
+        left: 80px; }
+  .line__number {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+  .line__event__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 77vw;
+    height: 100px; }
+  .line__event {
+    margin-top: -11px;
+    cursor: pointer; }
+    .line__event:hover .a0 svg circle {
+      transition: 0.3s all linear;
+      fill: #4EA4D9; }
+    .line__event:hover .a svg circle {
+      transition: 0.3s all linear;
+      fill: #22952E; }
+    .line__event:hover .b svg circle {
+      transition: 0.3s all linear;
+      fill: #70A1E9; }
+    .line__event:hover .v svg circle {
+      transition: 0.3s all linear;
+      fill: #5874C8; }
+    .line__event:hover .g svg circle {
+      transition: 0.3s all linear;
+      fill: #621F97; }
+  .line__event__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #000000; }
+  .line__event__name {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase; }

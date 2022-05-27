@@ -1,101 +1,110 @@
 @import "../../assets/scss/utils/grid.scss";
 
+
 .structure {
-    padding: 0px 0px 30px;
+    width: 100%;
+    position: relative;
+
+    &__title {
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 53px;
+        letter-spacing: 0.1em;
+        color: #263973;
+        margin-bottom: 70px;
+        @include xxl {
+            font-size: 27px;
+            line-height: 1.2em;
+            margin-bottom: 30px;
+        }
+    }
 
     &__stages {
         display: flex;
         justify-content: center;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
     }
 
     &__stage {
-        padding: 0 25px;
+        flex: 1;
+        margin-left: 40px;
+        transition: 0.3s all ease-in;
+        svg {
+            z-index: 1;
+            position: absolute;
+            &:hover circle{
+                cursor: pointer;
+                fill: #2B60AF;
+            }
+        }
+    }
+
+    &__image__wrapper {
+        width: 100%;
+        height: 35vh;
+        cursor: pointer;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        position: relative;
+        img {
+            position: absolute;
+            width: 84px;
+            height: 84px;
+            top: 30px;
+            right: 30px;
+        }        
+    }
+
+    &__text {
+        width: 100%;
+        height: 70px;
         font-weight: 800;
         font-size: 18px;
         line-height: 25px;
-        text-align: center;
         letter-spacing: 0.1em;
-        color: #263973;
-
+        color: #949494;
+        margin-top: 30px;
         @include xxl {
             font-size: 14px;
-            padding: 0 12px;
-        }
-
-        &_3 {
-            padding-top: 13px;
         }
     }
 
-    &__mid {
-        width: 312px;
-        height: 68px;
-        // background: url(../../assets/img/structure-mid.png) no-repeat;
-        background-size: contain;
-        margin-top: -10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    &__line {
+        width: 100%;
+        max-width: 1920px;
+        height: 6px;
+        background: #2B60AF;
         position: relative;
-
-        @include xxl {
-            width: 200px;
-        }
-
-        &::before, &::after {
-            content: '';
-            width: 130px;
-            height: 3px;
-            background: #CACACA;
-
-            @include xxl {
-                width: 80px;
-                height: 2px;
-            }
-        }
-
-        & i {
-            width: 13px;
-            height: 13px;
-            border-radius: 13px;
-            background: #FFFFFF;
-            border: 5px solid #263973;
-
-            @include xxl {
-                width: 9px;
-                height: 9px;
-                border-width: 4px;
-            }
-        }
-
-        & img {
+        margin: 0 auto;
+        svg {
+            z-index: 1;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: structure-rotate infinite 10s linear;
-            @include xxl {
-                width: 38px;
+            bottom: -5px;
+            right: 0;
+            &:hover circle{
+                cursor: pointer;
+                fill: #2B60AF;
             }
         }
     }
-
-    &__stage_3 &__logos {
-        padding-top: 60px;
-
-        @include xxl {
-            padding-top: 40px;
-        }
-    }
+    
     &__logos {
         padding-top: 50px;
         display: flex;
         align-items: center;
-
+        position: relative;
         @include xxl {
             padding-top: 30px;
         }
-
+        & > svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            stroke: #767676;
+        }
         & > div {
             display: flex;
             align-items: center;
@@ -111,73 +120,15 @@
             }
         }
     }
-
-    &__partners {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        margin-top: 140px;
-        padding-top: 40px;
-        position: relative;
-
-        @include xxl {
-            margin-top: 100px;
+    // Класс активности
+    & .active {
+        flex: 2.6;
+        .structure__text {
+            font-size: 23px;
+            color: #000000;
         }
-
-        &-inner {
-            transition: .4s;
-            position: relative;
+        svg circle{
+            fill: #2B60AF;
         }
-    }
-
-    &__arrow {
-        height: 40px;
-        width: 133px;
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 0px;
-        cursor: pointer;
-
-        @include xxl {
-            width: 100px;
-
-            & svg {
-                width: 100px;
-            }
-        }
-
-        &.prev {
-            left: 0;
-        }
-        &.next {
-            right: 0;
-            & > svg {
-                transform: rotate(180deg);
-            }
-        }
-    }
-}
-.structure__title {
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 53px;
-    letter-spacing: 0.1em;
-    color: #263973;
-    margin-bottom: 180px;
-
-    @include xxl {
-        font-size: 27px;
-        line-height: 1.2em;
-        margin-bottom: 100px;
-    }
-}
-
-@keyframes structure-rotate {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(-360deg);
     }
 }

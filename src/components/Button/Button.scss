@@ -14,12 +14,12 @@
 
 @mixin buttonSizeM {
   min-height: 65px;
-  padding: 12px 22px;
+  // padding: 12px 22px;
   font-weight: 700;
   font-size: 11px;
   @include xxl {
     min-height: 40px;
-    padding: 3px 11px;
+    // padding: 3px 11px;
     font-size: 9px;
   }
 }
@@ -121,6 +121,24 @@
       background: #1A588B;
       border-color: #1A588B;
       color: $white;
+    }
+  }
+
+  &.theme_white {
+    border: 1px solid #ffffff;
+    color: #000000;
+    background: #53A9DE;
+    text-transform: none;
+    font-size: 13px;
+    &:hover {
+      background: #2D74AD;
+      border-color: #2D74AD;
+      // color: $white;
+    }
+    &:active {
+      background: #1A588B;
+      border-color: #1A588B;
+      // color: $white;
     }
   }
   

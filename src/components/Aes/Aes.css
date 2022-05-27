@@ -6,9 +6,8 @@
   height: 100%; }
 
 .aes__svg {
-  max-width: 100%;
-  width: 95%;
-  margin-top: -50px; }
+  width: 100%;
+  max-width: 100%; }
   @media (max-width: 1600px) {
     .aes__svg {
       margin-top: 0px; } }

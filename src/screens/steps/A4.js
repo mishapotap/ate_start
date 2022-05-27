@@ -22,50 +22,39 @@ export const A4 = () => {
     }, []);
 
     return (
-        <Fragment>
-             <div class="step-title1">
-                Подэтап А4
+        <div className='page'>
+            <div className='step-wrapper'>
+                {/* <div class="step-title">Холодно-Горячая обкатка реакторной установки</div> */}
+                <div class="step-title1">Подэтап А4</div>
             </div>
-            <div class="step-title">
-                
-            </div>
+            {/* <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
             <Aes step='a4' />
             <Footer>
                 <div className='footer__btns'>
                      
                 </div>
                 <div className='footer__content'>
-                    <div className='footer__left'>
-                        <div className='footer__btn-structure short'>
-                            <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>Положение АТЭ в структуре АЭС</Button>
-                        </div>
-                        <div className='footer__btn-steps'>
-                            <Link to={routes.MAP}>
-                                <Button size={ButtonSize.m}>Этапы пусконаладочных работ в структуре АЭС</Button>
-                            </Link>
-                        </div>
+                    <div className='footer__middle'>
+                        <Link to={routes.A3} className='footer__pagebutton _prev'>
+                            <Button theme="white" size={ButtonSize.m}>
+                                <ArrowIcon />
+                                Подэтап А3
+                            </Button>
+                        </Link>
+                        <Link to={routes.MAP} className='footer__pagebutton _middle'>
+                            <Button size={ButtonSize.m}>
+                                Этапы пусконаладочных работ
+                            </Button>
+                        </Link>
+                        <Link to={routes.B0} className='footer__pagebutton _next'>
+                            <Button theme="white" size={ButtonSize.m}>
+                                Этап Б
+                                <ArrowIcon />
+                            </Button>
+                        </Link>
                     </div>
                     <div className='footer__right'>
-                        <div className='footer__links'>
-                            <div className='footer__title'>
-                                Ревизия основного оборудования
-                                <b>Подэтап А4</b>
-                            </div>
-                            <div className='footer__link'>
-                                <Link to={routes.B0}>
-                                    <span>Смотреть далее</span>
-                                    <span>Подэтап Б</span>
-                                </Link>        
-                            </div>
-                        </div>
-                        <div className='footer__pagebuttons'>
-                            <Link to={routes.A3} className='footer__pagebutton _prev'>
-                                <Button size={ButtonSize.m}><ArrowIcon /></Button>
-                            </Link>
-                            <Link to={routes.B0} className='footer__pagebutton _next'>
-                                <Button size={ButtonSize.m}><ArrowIcon /></Button>
-                            </Link>
-                        </div>
+                        <Button size={ButtonSize.m} onClick={() => {setIsStructureOpened(true)}}>ПНР в структуре создания АЭС</Button>
                     </div>
                 </div>
             </Footer>
@@ -94,6 +83,6 @@ export const A4 = () => {
             <Modal isOpened={isStructureOpened} onClose={() => {setIsStructureOpened(false)}} className='modal_large'>
                 <Structure />
             </Modal>
-        </Fragment>
+        </div>
     );
 };
