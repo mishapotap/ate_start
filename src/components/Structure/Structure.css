@@ -22,7 +22,8 @@
   .structure__stage {
     flex: 1;
     margin-left: 40px;
-    transition: 0.3s all ease-in; }
+    transition: 0.3s all ease-in;
+    overflow: hidden; }
     .structure__stage svg {
       z-index: 1;
       position: absolute; }

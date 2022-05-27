@@ -2,14 +2,10 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
-import Layout from '../../components/Layout';
 import { Modal } from '../../components/Modal/Modal';
 import { Structure } from '../../components/Structure';
 import { ArrowIcon } from '../../components/svg/ArrowIcon';
-import { QuestionIcon } from '../../components/svg/QuestionIcon';
-import { VolumeIcon } from '../../components/svg/VolumeIcon';
 import * as routes from '../../const/routes';
-
 
 // Swiper
 import { Navigation, HashNavigation } from "swiper";

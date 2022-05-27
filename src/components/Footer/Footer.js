@@ -1,10 +1,5 @@
-import cx from 'classnames';
-import React, { useEffect, useRef, useState } from 'react'
-import { Button, ButtonSize } from '../Button/Button';
-import { VolumeIcon } from '../svg/VolumeIcon';
+import React from 'react'
 import './Footer.scss';
-
-import backAudio from '../../assets/audio/backSound.mp3';
 
 export const Footer = (props) => {
     return (

@@ -1,18 +1,12 @@
-import React, {Component, Fragment, useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, ButtonSize } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer';
-import Video from '../../components/Video/Video';
-import VideoContainer from '../../components/VideoContainer';
-import * as videos from '../../const/videos';
 import * as routes from '../../const/routes';
-import Layout from '../../components/Layout';
 import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import { Aes } from '../../components/Aes';
-import { QuestionIcon } from '../../components/svg/QuestionIcon';
 import { Modal } from '../../components/Modal/Modal';
 
-import ReactorPic from '../../assets/img/reactor.jpg'
 import { Structure } from '../../components/Structure';
 
 export const G2 = () => {
