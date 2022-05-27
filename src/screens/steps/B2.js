@@ -26,10 +26,10 @@ export const B2 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                {/* <div class="step-title">Физический пуск</div> */}
-                <div class="step-title1">Подэтап Б2</div>
+                {/* <div className="step-title">Физический пуск</div> */}
+                <div className="step-title1">Подэтап Б2</div>
             </div>
-            {/* <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
+            {/* <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
             <Aes step='b2' />
             <Footer>
                 <div className='footer__btns'>
@@ -69,7 +69,7 @@ export const B2 = () => {
                             <img src={ReactorPic} alt='' /> 
                         </div>
                         <div className='modal__col modal__col_right'>
-                            <div class='text'>
+                            <div className='text'>
                                 <div className='modal__subtext'>Достижение критического состояния реактора и выполнение физических экспериментов на МКУ (мин. контролируемый уровень мощности)</div>
                                 <ul>
                                     <li>Первый вывод реактора в критическое состояние (управляемая ядерная реакция);</li>

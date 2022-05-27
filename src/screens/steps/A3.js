@@ -24,10 +24,10 @@ export const A3 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Холодно-Горячая обкатка реакторной установки</div>
-                <div class="step-title1">Подэтап А3</div>
+                <div className="step-title">Холодно-Горячая обкатка реакторной установки</div>
+                <div className="step-title1">Подэтап А3</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='a3' />
             <Footer>
                 <div className='footer__btns'>
@@ -62,7 +62,7 @@ export const A3 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А3</div>подэтап</div>
                     <h3>Холодно-Горячая обкатка реакторной установки</h3>
-                    <div class='text'>
+                    <div className='text'>
                         Подэтап, в течение которого проводится циркуляционная промывка первого контура и гидравлические испытания трубопроводов и оборудования, наладка, испытания и опробование технологических систем и оборудования, электрооборудования и АСУ ТП при работе на номинальных параметрах первого контура с загруженными в реактор имитаторами топливных кассет с целью подтверждения проектных характеристик систем и оборудования реакторной установки
                     </div>
                     <div className='modal__link'>

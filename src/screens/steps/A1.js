@@ -24,10 +24,10 @@ export const A1 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Испытания и опробование оборудования</div>
-                <div class="step-title1">Подэтап А1</div>
+                <div className="step-title">Испытания и опробование оборудования</div>
+                <div className="step-title1">Подэтап А1</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='a1' />
             <Footer>
                 <div className='footer__btns'>
@@ -62,7 +62,7 @@ export const A1 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А1</div>подэтап</div>
                     <h3>Испытания и опробование оборудования</h3>
-                    <div class='text'>
+                    <div className='text'>
                         <div className='modal__subtext'>
                             Подэтап, в течение которого, начиная с системы дистиллята, производится приемка технологических систем и оборудования реакторного отделения и машинного зала блока из монтажа в ПНР.
                         </div>

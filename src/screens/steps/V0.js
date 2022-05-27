@@ -26,10 +26,10 @@ export const V0 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Энергетический пуск</div>
-                <div class="step-title1">Этап В</div>
+                <div className="step-title">Энергетический пуск</div>
+                <div className="step-title1">Этап В</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='v0' />
             <Footer>
                 <div className='footer__btns'>
@@ -69,7 +69,7 @@ export const V0 = () => {
                             <img src={ReactorPic} alt='' /> 
                         </div>
                         <div className='modal__col modal__col_right'>
-                            <div class='text'>
+                            <div className='text'>
                                 <div className='modal__subtext'>Ввод АЭС в эксплуатацию от завершения физического пуска реактора до начала выработки электроэнергии.</div>
                                 <ul>
                                     <li>Поэтапный подъем мощности реактора до 30% со сбросом пара в конденсатор через БРУ-К;</li>
@@ -80,7 +80,7 @@ export const V0 = () => {
                             </div>
                         </div>
                     </div>
-                    <div class='text' style={{marginTop: '60px'}}>
+                    <div className='text' style={{marginTop: '60px'}}>
                         Выполняется повышение мощности реактора поэтапно до уровня 40 % от номинальной мощности. Выполняются проверки, испытаний и подтверждение достоверности данных с систем контроля и управления, испытаний основных регуляторов энергоблока, уровнемеров, отсечных и предохранительных устройств. Продолжаются физические испытания и эксперименты. Выполняется первый толчок турбины, разворот турбины, вывод турбины на номинальные обороты. Выполняется синхронизация и включение генератора в электрическую сеть, энергоблок начинает вырабатывать электроэнергию в энергосистему страны.
                     </div>
                     <div className='modal__link'>

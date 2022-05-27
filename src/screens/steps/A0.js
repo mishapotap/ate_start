@@ -26,10 +26,10 @@ export const A0 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Подготовительный этап</div>
-                <div class="step-title1">Подэтап А0</div>
+                <div className="step-title">Подготовительный этап</div>
+                <div className="step-title1">Подэтап А0</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             
             
             <Aes step='a0' />
@@ -66,7 +66,7 @@ export const A0 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А0</div>подэтап</div>
                     <h3>Подготовительный этап</h3>
-                    <div class='text'>
+                    <div className='text'>
                         Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
                     </div>
                     <div className='modal__link'>

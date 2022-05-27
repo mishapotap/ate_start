@@ -27,10 +27,10 @@ export const G1 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Освоение мощности</div>
-                <div class="step-title1">Подэтап Г1</div>
+                <div className="step-title">Освоение мощности</div>
+                <div className="step-title1">Подэтап Г1</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='g1' />
             <Footer>
                 <div className='footer__btns'>
@@ -65,7 +65,7 @@ export const G1 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>Г1</div>подэтап</div>
                     <h3>Освоение мощности</h3>
-                    <div class='text'>
+                    <div className='text'>
                         <div className='modal__subtext'>
                             Освоение мощности блока АЭС от включения генератора в сеть до 100% номинальной мощности.<br />
                             Номинальная мощность (номинальный уровень) – это 100% проектная мощность реактора.

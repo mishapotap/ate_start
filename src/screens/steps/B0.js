@@ -24,10 +24,10 @@ export const B0 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Физический пуск</div>
-                <div class="step-title1">Этап Б</div>
+                <div className="step-title">Физический пуск</div>
+                <div className="step-title1">Этап Б</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='b0' />
             <Footer>
                 <div className='footer__btns'>
@@ -62,7 +62,7 @@ export const B0 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>Б</div>этап</div>
                     <h3>Физический пуск</h3>
-                    <div class='text'>
+                    <div className='text'>
                         Этап ввода блока АЭС в эксплуатацию, включающий загрузку реактора ядерным топливом, достижение критического состояния реактора и выполнение необходимых физических экспериментов на уровне мощности, при котором теплоотвод от реак4тора осуществляется за счет естественных теплопотерь.
                     </div>
                     <div className='modal__link'>

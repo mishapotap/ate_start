@@ -33,10 +33,10 @@ export const Final = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Промышленная эксплуатация</div>
-                <div class="step-title1">Финал</div>
+                <div className="step-title">Промышленная эксплуатация</div>
+                <div className="step-title1">Финал</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             
             <Video video={video1} controls={false} background={true} onEnded={handleEnded} />
             
@@ -75,7 +75,7 @@ export const Final = () => {
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
                 <div>
                     <h3>Промышленная эксплуатация</h3>
-                    <div class='text'>
+                    <div className='text'>
                         Промышленная эксплуатация - это эксплуатация блока АЭС, безопасность и соответствие проекту которого подтверждены испытаниями в процессе ввода в эксплуатацию. Осуществляется после выдачи ГК «РОСТАТОМ» Разрешения на ввод в эксплуатацию блока АЭС.
                     </div>
                 </div>

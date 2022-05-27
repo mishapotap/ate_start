@@ -26,10 +26,10 @@ export const G0 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Опытно-промышленная эксплуатация</div>
-                <div class="step-title1">Этап Г</div>
+                <div className="step-title">Опытно-промышленная эксплуатация</div>
+                <div className="step-title1">Этап Г</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='g0' />
             <Footer>
                 <div className='footer__btns'>
@@ -69,7 +69,7 @@ export const G0 = () => {
                             <img src={ReactorPic} alt='' /> 
                         </div>
                         <div className='modal__col modal__col_right'>
-                            <div class='text'>
+                            <div className='text'>
                                 Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.
                             </div>
                         </div>

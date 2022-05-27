@@ -24,10 +24,10 @@ export const A4 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                {/* <div class="step-title">Холодно-Горячая обкатка реакторной установки</div> */}
-                <div class="step-title1">Подэтап А4</div>
+                {/* <div className="step-title">Холодно-Горячая обкатка реакторной установки</div> */}
+                <div className="step-title1">Подэтап А4</div>
             </div>
-            {/* <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
+            {/* <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
             <Aes step='a4' />
             <Footer>
                 <div className='footer__btns'>
@@ -62,7 +62,7 @@ export const A4 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А4</div>подэтап</div>
                     <h3>Ревизия основного оборудования</h3>
-                    <div class='text'>
+                    <div className='text'>
                         <div className='modal__subtext'>Подэтап, в течение которого производятся ревизия основного оборудования после ХГО.</div>
                         <ul>
                             <li>Выполняется разборка реактора после ХГО, ревизия дефектного и выбранного оборудования оборудования РУ и первого контура, оценка технического состояния после испытаний на ХГО.</li>

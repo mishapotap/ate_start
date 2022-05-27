@@ -26,10 +26,10 @@ export const G2 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                <div class="step-title">Комплексное опробование блока АЭС на номинальной мощности</div>
-                <div class="step-title1">Подэтап Г2</div>
+                <div className="step-title">Комплексное опробование блока АЭС на номинальной мощности</div>
+                <div className="step-title1">Подэтап Г2</div>
             </div>
-            <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
+            <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div>
             <Aes step='g2' />
             <Footer>
                 <div className='footer__btns'>
@@ -64,7 +64,7 @@ export const G2 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>Г2</div>подэтап</div>
                     <h3>Комплексное опробование блока АЭС на номинальной мощности</h3>
-                    <div class='text'>
+                    <div className='text'>
                         <div className='modal__subtext'>
                             Выполняется нормальная и непрерывная работа основного оборудования энергоблока в течении 15 суток при постоянной или поочередной работе всего вспомогательного оборудования по проектной схеме на номинальной мощности
                         </div>

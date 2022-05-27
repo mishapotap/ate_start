@@ -24,10 +24,10 @@ export const A2 = () => {
     return (
         <div className='page'>
             <div className='step-wrapper'>
-                {/* <div class="step-title">Подготовительный этап</div> */}
-                <div class="step-title1">Подэтап А2</div>
+                {/* <div className="step-title">Подготовительный этап</div> */}
+                <div className="step-title1">Подэтап А2</div>
             </div>
-            {/* <div class="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
+            {/* <div className="step-title__details" onClick={() => {setIsStepModalOpened(true)}}>Подробнее</div> */}
             <Aes step='a2' />
             <Footer>
                 <div className='footer__btns'>
@@ -62,7 +62,7 @@ export const A2 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А2</div>подэтап</div>
                     <h3>Испытания СГО (Система герметичных охлаждений)</h3>
-                    <div class='text'>
+                    <div className='text'>
                         <div className='modal__subtext'>
                             Проверяется плотность и прочность герметичных ограждений (внутренней защитной оболочки).
                         </div>
