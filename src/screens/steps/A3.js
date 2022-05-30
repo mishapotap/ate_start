@@ -36,7 +36,7 @@ export const A3 = () => {
                                 Подэтап А2
                             </Button>
                         </Link>
-                        <Link to={routes.MAP} className='footer__pagebutton _middle'>
+                        <Link to={`${routes.MAP}#2`} className='footer__pagebutton _middle'>
                             <Button size={ButtonSize.m}>
                                 Этапы пусконаладочных работ
                             </Button>

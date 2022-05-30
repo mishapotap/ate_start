@@ -38,7 +38,7 @@ export const B2 = () => {
                                 Подэтап Б1
                             </Button>
                         </Link>
-                        <Link to={routes.MAP} className='footer__pagebutton _middle'>
+                        <Link to={`${routes.MAP}#3`} className='footer__pagebutton _middle'>
                             <Button size={ButtonSize.m}>
                                 Этапы пусконаладочных работ
                             </Button>

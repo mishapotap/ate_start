@@ -27,30 +27,34 @@
   font-size: 40px;
   letter-spacing: 0.1em;
   color: #263973; }
-  @media (max-width: 1600px) {
-    .map__title {
-      font-size: 27px;
-      padding-top: 0px;
-      padding-bottom: 35px; } }
+
+@media (max-width: 1600px) {
+  .map__title {
+    font-size: 27px;
+    padding-top: 0px;
+    padding-bottom: 35px; } }
 
 .map__slide {
   display: flex;
   position: relative;
   width: 68vw;
   height: 36vh; }
-  .map__slide__image {
-    transition: all 1s ease;
-    align-self: flex-end;
-    cursor: pointer; }
-    .map__slide__image:hover {
-      transform: scale(1.025); }
-  .map__slide__icon {
-    position: absolute;
-    width: 84px;
-    height: 84px;
-    top: 30px;
-    right: 30px;
-    z-index: 1; }
+
+.map__slide__image {
+  transition: all 1s ease;
+  align-self: flex-end;
+  cursor: pointer; }
+
+.map__slide__image:hover {
+  transform: scale(1.025); }
+
+.map__slide__icon {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  top: 30px;
+  right: 30px;
+  z-index: 1; }
 
 .navigation_prev_arrow {
   position: absolute;
@@ -58,14 +62,18 @@
   left: 2.5vw;
   width: 134px;
   height: 94px; }
-  .navigation_prev_arrow::after {
-    display: none; }
-  .navigation_prev_arrow svg {
-    transform: rotate(180deg); }
-  .navigation_prev_arrow svg:hover path {
-    stroke: #2D74AD; }
-  .navigation_prev_arrow svg:active path {
-    stroke: #1A588B; }
+
+.navigation_prev_arrow::after {
+  display: none; }
+
+.navigation_prev_arrow svg {
+  transform: rotate(180deg); }
+
+.navigation_prev_arrow svg:hover path {
+  stroke: #2D74AD; }
+
+.navigation_prev_arrow svg:active path {
+  stroke: #1A588B; }
 
 .navigation_next_arrow {
   position: absolute;
@@ -73,12 +81,15 @@
   right: 2.5vw;
   width: 134px;
   height: 94px; }
-  .navigation_next_arrow::after {
-    display: none; }
-  .navigation_next_arrow svg:hover path {
-    stroke: #2D74AD; }
-  .navigation_next_arrow svg:active path {
-    stroke: #1A588B; }
+
+.navigation_next_arrow::after {
+  display: none; }
+
+.navigation_next_arrow svg:hover path {
+  stroke: #2D74AD; }
+
+.navigation_next_arrow svg:active path {
+  stroke: #1A588B; }
 
 .event {
   display: flex;
@@ -86,133 +97,158 @@
   width: 1300px;
   height: 60px;
   margin-top: 35px; }
-  .event__number {
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 47px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    margin-right: 45px; }
-  .event__title {
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 26px;
-    letter-spacing: 0.1em;
-    color: #000000;
-    margin-bottom: 13px;
-    cursor: pointer; }
-    .event__title:hover {
-      color: #1A588B; }
-    .event__title:active {
-      color: #263973; }
-  .event__moreinfo {
-    position: relative;
-    margin-left: 130px;
-    display: block;
-    width: 203px;
-    height: 19px;
-    cursor: pointer;
-    /* text */
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 19px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #000000; }
-    .event__moreinfo:hover {
-      color: #1A588B; }
-      .event__moreinfo:hover:before {
-        background-color: #1A588B; }
-    .event__moreinfo:active {
-      color: #263973; }
-      .event__moreinfo:active:before {
-        background-color: #263973; }
-    .event__moreinfo:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 120px;
-      height: 1px;
-      background-color: #000000;
-      bottom: 5px;
-      left: -130px; }
+
+.event__number {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-right: 45px; }
+
+.event__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-bottom: 13px;
+  cursor: pointer; }
+
+.event__title:hover {
+  color: #1A588B; }
+
+.event__title:active {
+  color: #263973; }
+
+.event__moreinfo {
+  position: relative;
+  margin-left: 130px;
+  display: block;
+  width: 203px;
+  height: 19px;
+  cursor: pointer;
+  /* text */
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000000; }
+
+.event__moreinfo:hover {
+  color: #1A588B; }
+
+.event__moreinfo:hover:before {
+  background-color: #1A588B; }
+
+.event__moreinfo:active {
+  color: #263973; }
+
+.event__moreinfo:active:before {
+  background-color: #263973; }
+
+.event__moreinfo:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  background-color: #000000;
+  bottom: 5px;
+  left: -130px; }
 
 .line {
   margin-top: 50px;
   width: 77vw;
   height: 6px; }
-  .line__etap {
-    position: absolute;
-    left: -95px;
-    bottom: 93px;
-    font-weight: 900;
-    font-size: 18px;
-    letter-spacing: 0.1em; }
-    .line__etap__prev {
-      position: absolute;
-      left: -200px;
-      bottom: 93px;
-      font-weight: 900;
-      font-size: 18px;
-      letter-spacing: 0.1em; }
-      .line__etap__prev__before {
-        display: block;
-        position: absolute;
-        width: 33px;
-        height: 3px;
-        bottom: 9px;
-        left: -40px; }
-    .line__etap__next {
-      position: absolute;
-      left: 78vw;
-      bottom: 93px;
-      font-weight: 900;
-      font-size: 18px;
-      letter-spacing: 0.1em;
-      white-space: nowrap; }
-      .line__etap__next__before {
-        display: block;
-        position: absolute;
-        width: 33px;
-        height: 3px;
-        bottom: 9px;
-        left: 80px; }
-  .line__number {
-    position: absolute;
-    left: 0;
-    bottom: 0; }
-  .line__event__wrapper {
-    display: flex;
-    justify-content: flex-start;
-    width: 77vw;
-    height: 100px; }
-  .line__event {
-    margin-top: -11px;
-    cursor: pointer; }
-    .line__event:hover .a0 svg circle {
-      transition: 0.3s all linear;
-      fill: #4EA4D9; }
-    .line__event:hover .a svg circle {
-      transition: 0.3s all linear;
-      fill: #22952E; }
-    .line__event:hover .b svg circle {
-      transition: 0.3s all linear;
-      fill: #70A1E9; }
-    .line__event:hover .v svg circle {
-      transition: 0.3s all linear;
-      fill: #5874C8; }
-    .line__event:hover .g svg circle {
-      transition: 0.3s all linear;
-      fill: #621F97; }
-  .line__event__text {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.05em;
-    color: #000000; }
-  .line__event__name {
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase; }
+
+.line__etap {
+  position: absolute;
+  left: -95px;
+  bottom: 93px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.1em; }
+
+.line__etap__prev {
+  position: absolute;
+  left: -200px;
+  bottom: 93px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.1em; }
+
+.line__etap__prev__before {
+  display: block;
+  position: absolute;
+  width: 33px;
+  height: 3px;
+  bottom: 9px;
+  left: -40px; }
+
+.line__etap__next {
+  position: absolute;
+  left: 78vw;
+  bottom: 93px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  white-space: nowrap; }
+
+.line__etap__next__before {
+  display: block;
+  position: absolute;
+  width: 33px;
+  height: 3px;
+  bottom: 9px;
+  left: 80px; }
+
+.line__number {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.line__event__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 77vw;
+  height: 100px; }
+
+.line__event {
+  margin-top: -11px;
+  cursor: pointer; }
+
+.line__event:hover .a0 svg circle {
+  transition: 0.3s all linear;
+  fill: #4EA4D9; }
+
+.line__event:hover .a svg circle {
+  transition: 0.3s all linear;
+  fill: #22952E; }
+
+.line__event:hover .b svg circle {
+  transition: 0.3s all linear;
+  fill: #70A1E9; }
+
+.line__event:hover .v svg circle {
+  transition: 0.3s all linear;
+  fill: #5874C8; }
+
+.line__event:hover .g svg circle {
+  transition: 0.3s all linear;
+  fill: #621F97; }
+
+.line__event__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: #000000; }
+
+.line__event__name {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }

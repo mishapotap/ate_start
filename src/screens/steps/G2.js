@@ -37,7 +37,7 @@ export const G2 = () => {
                                 Подэтап Г1
                             </Button>
                         </Link>
-                        <Link to={routes.MAP} className='footer__pagebutton _middle'>
+                        <Link to={`${routes.MAP}#5`} className='footer__pagebutton _middle'>
                             <Button size={ButtonSize.m}>
                                 Этапы пусконаладочных работ
                             </Button>
