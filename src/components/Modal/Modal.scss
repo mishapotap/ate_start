@@ -128,7 +128,8 @@
 	text-align: right;
 	letter-spacing: 0.14em;
 	text-align: right;
-	padding-top: 93px;
+	// padding-top: 93px;
+	padding-top: 8vh;
 
 	@include xxl {
 		padding-top: 45px;
@@ -194,4 +195,15 @@
 .modal__image {
 	display: block;
 	margin: 0 auto 30px;
+}
+
+.modal__img{
+	flex: 1;
+	margin-right: 20px;
+	margin-bottom: 40px;
+
+	&__wrapper {
+	display: flex;
+	justify-content: space-between;
+	}
 }

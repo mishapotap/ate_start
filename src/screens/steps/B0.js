@@ -7,6 +7,9 @@ import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import { Aes } from '../../components/Aes';
 import { Modal } from '../../components/Modal/Modal';
 import { Structure } from '../../components/Structure';
+import Modal_Image_1 from '../../assets/img/Map/Modals/B0/modal-01.jpg';
+import Modal_Image_2 from '../../assets/img/Map/Modals/B0/modal-02.jpg';
+import Modal_Image_3 from '../../assets/img/Map/Modals/B0/modal-03.jpg';
 
 export const B0 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
@@ -57,6 +60,11 @@ export const B0 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>Б</div>этап</div>
                     <h3>Физический пуск</h3>
+                    <div className='modal__img__wrapper'>
+                        <img src={Modal_Image_1} className='modal__img' alt="" />
+                        <img src={Modal_Image_2} className='modal__img' alt="" />
+                        <img src={Modal_Image_3} className='modal__img' alt="" />
+                    </div>
                     <div className='text'>
                         Этап ввода блока АЭС в эксплуатацию, включающий загрузку реактора ядерным топливом, достижение критического состояния реактора и выполнение необходимых физических экспериментов на уровне мощности, при котором теплоотвод от реак4тора осуществляется за счет естественных теплопотерь.
                     </div>

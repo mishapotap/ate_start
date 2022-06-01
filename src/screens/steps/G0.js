@@ -59,15 +59,9 @@ export const G0 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>Г</div>этап</div>
                     <h3>Опытно-промышленная эксплуатация</h3>
-                    <div className='modal__row'>
-                        <div className='modal__col modal__col_left'>
-                            <img src={ReactorPic} alt='' /> 
-                        </div>
-                        <div className='modal__col modal__col_right'>
-                            <div className='text'>
-                                Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.
-                            </div>
-                        </div>
+                    <img src={ReactorPic} style={{width: "100%"}} alt='' /> 
+                    <div className='text'>
+                        <div className='modal__subtext'>Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.</div>
                     </div>
                     <div className='modal__link'>
                         <Link to={routes.G1}>

@@ -8,6 +8,7 @@ import { Aes } from '../../components/Aes';
 import { Modal } from '../../components/Modal/Modal';
 import { Structure } from '../../components/Structure';
 
+
 export const A2 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
     const [isStructureOpened, setIsStructureOpened] = useState(false);

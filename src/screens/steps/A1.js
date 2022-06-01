@@ -7,6 +7,10 @@ import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import { Aes } from '../../components/Aes';
 import { Modal } from '../../components/Modal/Modal';
 import { Structure } from '../../components/Structure';
+import Modal_Image_1 from '../../assets/img/Map/Modals/A1/modal-01.jpg';
+import Modal_Image_2 from '../../assets/img/Map/Modals/A1/modal-02.jpg';
+import Modal_Image_3 from '../../assets/img/Map/Modals/A1/modal-03.jpg';
+
 
 export const A1 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
@@ -57,6 +61,11 @@ export const A1 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А1</div>подэтап</div>
                     <h3>Испытания и опробование оборудования</h3>
+                    <div className='modal__img__wrapper'>
+                        <img src={Modal_Image_1} className='modal__img' alt="" />
+                        <img src={Modal_Image_2} className='modal__img' alt="" />
+                        <img src={Modal_Image_3} className='modal__img' alt="" />
+                    </div>
                     <div className='text'>
                         <div className='modal__subtext'>
                             Подэтап, в течение которого, начиная с системы дистиллята, производится приемка технологических систем и оборудования реакторного отделения и машинного зала блока из монтажа в ПНР.

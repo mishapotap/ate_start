@@ -97,12 +97,12 @@ export const Map = () => {
                                 opacity: isActive ? 1 : 0.46,
                             }}>
                             </img>
-                            {isActive && (<img className='map__slide__icon' src={Icon1} style={{width: 84, height: 84}} alt="Slide icon" />)}
+                            {isActive && (<img className='map__slide__icon' src={Icon1} alt="Slide icon" />)}
                             
                         </div>
                         <div className='event'>
                             {isActive && <div className='event__number' style={{color: "#53A9DE"}}>Этап 0</div>}
-                            <div>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between"}}>
                                 {isActive && <div className='event__title' onClick={() => {setIsS0ModalOpened(true)}}>Подготовительный этап</div>}
                                 {isActive && <div className='event__moreinfo' onClick={() => {setIsS0ModalOpened(true)}}>Подробнее</div>}
                             </div>
@@ -145,11 +145,11 @@ export const Map = () => {
                                 opacity: isActive ? 1 : 0.46,
                             }}>
                             </img>
-                            {isActive && (<img className='map__slide__icon' src={Icon2} style={{width: 84, height: 84}} alt="Slide icon" />)}
+                            {isActive && (<img className='map__slide__icon' src={Icon2} alt="Slide icon" />)}
                         </div>
                         <div className='event'>
                             {isActive && <div className='event__number' style={{color: "#22952E"}}>Этап А</div>}
-                            <div>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between"}}>
                                 {isActive && <div className='event__title' onClick={() => {setIsS1ModalOpened(true)}}>Предпусковые наладочные работы</div>}
                                 {isActive && <div className='event__moreinfo' onClick={() => {setIsS1ModalOpened(true)}}>Подробнее</div>}
                             </div>
@@ -212,11 +212,11 @@ export const Map = () => {
                                 opacity: isActive ? 1 : 0.46,
                             }}>
                             </img>
-                            {isActive && (<img className='map__slide__icon' src={Icon3} style={{width: 84, height: 84}} alt="Slide icon" />)}
+                            {isActive && (<img className='map__slide__icon' src={Icon3} alt="Slide icon" />)}
                         </div>
                         <div className='event'>
                             {isActive && <div className='event__number' style={{color: "#3667AF"}}>Этап Б</div>}
-                            <div>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between"}}>
                                 {isActive && <div className='event__title' onClick={() => {setIsS2ModalOpened(true)}}>Физпуск</div>}
                                 {isActive && <div className='event__moreinfo' onClick={() => {setIsS2ModalOpened(true)}}>Подробнее</div>}
                             </div>
@@ -265,11 +265,11 @@ export const Map = () => {
                                 opacity: isActive ? 1 : 0.46,
                             }}>
                             </img>
-                            {isActive && (<img className='map__slide__icon' src={Icon4} style={{width: 84, height: 84}} alt="Slide icon" />)}
+                            {isActive && (<img className='map__slide__icon' src={Icon4} alt="Slide icon" />)}
                         </div>
                         <div className='event'>
                             {isActive && <div className='event__number' style={{color: "#263973"}}>Этап В</div>}
-                            <div>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between"}}>
                                 {isActive && <div className='event__title' onClick={() => {setIsS3ModalOpened(true)}}>Энергопуск</div>}
                                 {isActive && <div className='event__moreinfo' onClick={() => {setIsS3ModalOpened(true)}}>Подробнее</div>}
                             </div>
@@ -311,11 +311,11 @@ export const Map = () => {
                                 opacity: isActive ? 1 : 0.46,
                             }}>
                             </img>
-                            {isActive && (<img className='map__slide__icon' src={Icon5} style={{width: 84, height: 84}} alt="Slide icon" />)}
+                            {isActive && (<img className='map__slide__icon' src={Icon5} alt="Slide icon" />)}
                         </div>
                         <div className='event'>
                             {isActive && <div className='event__number' style={{color: "#621F97"}}>Этап Г</div>}
-                            <div>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: "space-between"}}>
                                 {isActive && <div className='event__title' onClick={() => {setIsS4ModalOpened(true)}}>Опытно-промышленная эксплуатация</div>}
                                 {isActive && <div className='event__moreinfo' onClick={() => {setIsS4ModalOpened(true)}}>Подробнее</div>}
                             </div>

@@ -7,6 +7,9 @@ import { ArrowIcon } from '../../components/svg/ArrowIcon';
 import { Aes } from '../../components/Aes';
 import { Modal } from '../../components/Modal/Modal';
 import { Structure } from '../../components/Structure';
+import Modal_Image_1 from '../../assets/img/Map/Modals/A3/main/modal-01.jpg';
+import Modal_Image_2 from '../../assets/img/Map/Modals/A3/main/modal-02.jpg';
+import Modal_Image_3 from '../../assets/img/Map/Modals/A3/main/modal-03.jpg';
 
 export const A3 = () => {
     const [isStepModalOpened, setIsStepModalOpened] = useState(false);
@@ -57,6 +60,11 @@ export const A3 = () => {
                 <div>
                     <div className='modal__stage-subtitle'><div>А3</div>подэтап</div>
                     <h3>Холодно-Горячая обкатка реакторной установки</h3>
+                    <div className='modal__img__wrapper'>
+                        <img src={Modal_Image_1} className='modal__img' alt="" />
+                        <img src={Modal_Image_2} className='modal__img' alt="" />
+                        <img src={Modal_Image_3} className='modal__img' alt="" />
+                    </div>
                     <div className='text'>
                         Подэтап, в течение которого проводится циркуляционная промывка первого контура и гидравлические испытания трубопроводов и оборудования, наладка, испытания и опробование технологических систем и оборудования, электрооборудования и АСУ ТП при работе на номинальных параметрах первого контура с загруженными в реактор имитаторами топливных кассет с целью подтверждения проектных характеристик систем и оборудования реакторной установки
                     </div>
