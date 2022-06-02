@@ -1,8 +1,6 @@
 .menu {
   width: 100%;
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px; }
+  position: relative; }
   .menu__stages {
     display: flex;
     width: 100%;
@@ -14,6 +12,8 @@
     margin-left: 2.5vw;
     transition: 0.5s all ease;
     opacity: 0.6; }
+    .menu__stage:last-child {
+      margin-right: 2.5vw; }
     .menu__stage:hover {
       opacity: 1; }
     .menu__stage:hover svg {

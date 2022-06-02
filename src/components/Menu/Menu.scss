@@ -4,8 +4,8 @@
 .menu {
     width: 100%;
     position: relative;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    // padding-top: 60px;
+    // padding-bottom: 60px;
     
 
     &__stages {
@@ -22,6 +22,9 @@
         margin-left: 2.5vw;
         transition: 0.5s all ease;
         opacity: 0.6;
+        &:last-child {
+            margin-right: 2.5vw;
+        }
         &:hover {
             opacity: 1;
         }

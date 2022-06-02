@@ -123,7 +123,8 @@ body {
     display: flex;
     height: 100%;
     min-height: 100%;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: center; }
 
 ol {
   margin: 1em 0;
@@ -253,12 +254,6 @@ a {
     .arrow-btn {
       height: 260px;
       width: 60px; } }
-  .arrow-btn_prev {
-    background-image: url(./assets/img/backBg.jpg);
-    left: 0; }
-  .arrow-btn_next {
-    background-image: url(./assets/img/forwardBg.jpg);
-    right: 0; }
   .arrow-btn.hidden {
     opacity: 0; }
   .arrow-btn__arrow {

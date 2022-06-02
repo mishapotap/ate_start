@@ -57,6 +57,7 @@ body {
 		height: 100%;
 		min-height: 100%;
 		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -220,15 +221,6 @@ a {
 	@include xxl {
 		height: 260px;
 		width: 60px;
-	}
-
-	&_prev {
-		background-image: url(./assets/img/backBg.jpg);
-		left: 0;
-	}
-	&_next {
-		background-image: url(./assets/img/forwardBg.jpg);
-		right: 0;
 	}
 
 	&.hidden {
