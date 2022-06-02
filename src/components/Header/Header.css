@@ -12,15 +12,9 @@
 
 .header__logo {
   flex: 0 0 179px;
-  padding-left: 50px; }
-  @media (max-width: 1600px) {
-    .header__logo {
-      padding-left: 20px; } }
+  padding-left: 2.5vw; }
   .header__logo img {
-    width: 129px; }
-    @media (max-width: 1600px) {
-      .header__logo img {
-        width: 100px; } }
+    width: 160px; }
 
 .header__middle {
   flex: 1 1 100%;
@@ -45,15 +39,15 @@
   align-items: center;
   justify-content: center;
   height: 88px;
+  background: #4EA4D9;
+  transition: .3s;
+  align-items: center;
   font-weight: 700;
   font-size: 11px;
   line-height: 13px;
-  align-items: center;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  background: #4EA4D9;
-  color: #ffffff;
-  transition: .3s; }
+  color: #ffffff; }
   @media (max-width: 1600px) {
     .menu-btn {
       height: 56px;

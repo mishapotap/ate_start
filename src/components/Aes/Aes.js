@@ -10,16 +10,16 @@ import ReactorPic3 from '../../assets/img/Scheme-4.gif'
 
 
 
-import Gradeer from "../../assets/img/aes/1.png"
-import TurbinBuild from "../../assets/img/aes/2.png"
-import ReactorBuild from "../../assets/img/aes/3.png"
-import ReactorHelpBuild from "../../assets/img/aes/4.png"
-import Pool from "../../assets/img/aes/5.png"
-import CleaningBuild from "../../assets/img/aes/6.png"
-import RdesBdes from "../../assets/img/aes/7.png"
-import ChemicalCleaning from "../../assets/img/aes/8.png"
+// import Gradeer from "../../assets/img/aes/1.png"
+// import TurbinBuild from "../../assets/img/aes/2.png"
+// import ReactorBuild from "../../assets/img/aes/3.png"
+// import ReactorHelpBuild from "../../assets/img/aes/4.png"
+// import Pool from "../../assets/img/aes/5.png"
+// import CleaningBuild from "../../assets/img/aes/6.png"
+// import RdesBdes from "../../assets/img/aes/7.png"
+// import ChemicalCleaning from "../../assets/img/aes/8.png"
 import StartReserve from "../../assets/img/aes/9.png"
-import ElectricBuild from "../../assets/img/aes/10.png"
+// import ElectricBuild from "../../assets/img/aes/10.png"
 
 
 import { Modal } from '../Modal/Modal';
