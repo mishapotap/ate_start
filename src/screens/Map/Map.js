@@ -383,24 +383,34 @@ export const Map = () => {
             </Footer>
             <Modal isOpened={isS0ModalOpened} onClose={() => {setIsS0ModalOpened(false)}}>
                  <div>
-                     <div className='modal__stage-subtitle'><div>0</div>этап</div>
-                     <h3>Подготовительный этап</h3>
-                     <div className='text'>
-                     Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
-                     </div>
+                <div className='modal__stage-subtitle'><div>0</div>этап</div>
+                <h3>Подготовительный этап</h3>
+                <div className='modal__img__wrapper'>
+                    <img src={require("../../assets/img/Map/Modals/A0/modal-01.jpg")} className='modal__img' alt="" />
+                    <img src={require("../../assets/img/Map/Modals/A0/modal-02.jpg")} className='modal__img' alt="" />
+                    <img src={require("../../assets/img/Map/Modals/A0/modal-03.jpg")} className='modal__img' alt="" />
+                </div>
+                <div className='text'>
+                Производится приемка оборудования и систем объектов пускового комплекса блока АЭС, а также оборудования и СКУ реакторного и турбинного отделений из монтажа и выполнение на них ПНР, обеспечивающих проведение этапа А.1.
+                </div>
                  </div>
             </Modal>
             <Modal isOpened={isS1ModalOpened} onClose={() => {setIsS1ModalOpened(false)}}>
                  <div>
-                     <div className='modal__stage-subtitle'><div>А</div>этап</div>
-                     <h3>Предпусковые наладочные работы</h3>
-                     <div className='text'>
+                    <div className='modal__stage-subtitle'><div>А</div>этап</div>
+                    <h3>Предпусковые наладочные работы</h3>
+                    <div className='modal__img__wrapper'>
+                        <img src={require("../../assets/img/Map/Modals/A1/modal-01.jpg")} className='modal__img' alt="" />
+                        <img src={require("../../assets/img/Map/Modals/A1/modal-02.jpg")} className='modal__img' alt="" />
+                        <img src={require("../../assets/img/Map/Modals/A1/modal-03.jpg")} className='modal__img' alt="" />
+                    </div>
+                    <div className='text'>
                          Этап ввода в эксплуатацию энергоблока АЭС, при котором законченные 
                          строительством и монтажом системы и элементы блока АЭС приводятся 
                          в состояние эксплуатационной готовности с проверкой их соответствия 
                          установленным в проекте критериям и характеристикам и которым завершается 
                          готовность блока АЭС к физическому пуску реактора (разделён на 4 подэтапа).
-                     </div>
+                    </div>
                  </div>
             </Modal>
             <Modal isOpened={isStepModalOpened} onClose={() => {setIsStepModalOpened(false)}}>
@@ -416,6 +426,11 @@ export const Map = () => {
                  <div>
                      <div className='modal__stage-subtitle'><div>Б</div>этап</div>
                      <h3>Физпуск</h3>
+                     <div className='modal__img__wrapper'>
+                        <img src={require("../../assets/img/Map/Modals/B0/modal-01.jpg")} className='modal__img' alt="" />
+                        <img src={require("../../assets/img/Map/Modals/B0/modal-02.jpg")} className='modal__img' alt="" />
+                        <img src={require("../../assets/img/Map/Modals/B0/modal-03.jpg")} className='modal__img' alt="" />
+                    </div>
                      <div className='text'>
                          Этап ввода блока АЭС в эксплуатацию, включающий загрузку реактора ядерным топливом, достижение критического состояния реактора и выполнение необходимых физических экспериментов на уровне мощности, при котором теплоотвод от реак4тора осуществляется за счет естественных теплопотерь.
                      </div>
@@ -425,6 +440,7 @@ export const Map = () => {
                  <div>
                      <div className='modal__stage-subtitle'><div>В</div>этап</div>
                      <h3>Энергопуск</h3>
+                     <img src={require("../../assets/img/Scheme-4.gif")} style={{width: "100%"}} alt='' /> 
                      <div className='text'>
                          Ввод АЭС в эксплуатацию от завершения физического пуска реактора до начала выработки электроэнергии.
                      </div>
@@ -434,6 +450,7 @@ export const Map = () => {
                  <div>
                      <div className='modal__stage-subtitle'><div>Г</div>этап</div>
                      <h3>Опытно-промышленная эксплуатация</h3>
+                     <img src={require("../../assets/img/Scheme-full.gif")} style={{width: "100%"}} alt='' /> 
                      <div className='text'>
                          Этап ввода в эксплуатацию блока АЭС от энергетического пуска до приемки блока АЭС в промышленную эксплуатацию.
                      </div>
