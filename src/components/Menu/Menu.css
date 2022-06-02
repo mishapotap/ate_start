@@ -3,74 +3,63 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px; }
-
-.menu__stages {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 0 auto; }
-
-.menu__stage {
-  display: block;
-  flex: 1;
-  margin-left: 2.5vw;
-  transition: 0.5s all ease;
-  opacity: 0.6; }
-
-.menu__stage:hover {
-  opacity: 1; }
-
-.menu__stage:hover svg {
-  left: 100%;
-  right: 0; }
-
-.menu__stage svg {
-  z-index: 1;
-  position: absolute;
-  bottom: -5px;
-  right: 100%;
-  left: 0;
-  transition: 0.5s all ease; }
-
-.menu__stage svg:hover circle {
-  cursor: pointer;
-  fill: #2B60AF; }
-
-.menu__image__wrapper {
-  width: 100%;
-  height: 35vh;
-  cursor: pointer;
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  position: relative; }
-
-.menu__image__wrapper img {
-  position: absolute;
-  width: 4vw;
-  height: 4vw;
-  max-height: 84px;
-  max-width: 84px;
-  top: 30px;
-  right: 30px; }
-
-.menu__text {
-  height: 90px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 26px;
-  letter-spacing: 0.1em;
-  color: #000000;
-  margin-top: 30px; }
-
-@media (max-width: 1600px) {
+  .menu__stages {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto; }
+  .menu__stage {
+    display: block;
+    flex: 1;
+    margin-left: 2.5vw;
+    transition: 0.5s all ease;
+    opacity: 0.6; }
+    .menu__stage:hover {
+      opacity: 1; }
+    .menu__stage:hover svg {
+      left: 100%;
+      right: 0; }
+    .menu__stage svg {
+      z-index: 1;
+      position: absolute;
+      bottom: -5px;
+      right: 100%;
+      left: 0;
+      transition: 0.5s all ease; }
+      .menu__stage svg:hover circle {
+        cursor: pointer;
+        fill: #2B60AF; }
+  .menu__image__wrapper {
+    width: 100%;
+    height: 35vh;
+    cursor: pointer;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative; }
+    .menu__image__wrapper img {
+      position: absolute;
+      width: 4vw;
+      height: 4vw;
+      max-height: 84px;
+      max-width: 84px;
+      top: 30px;
+      right: 30px; }
   .menu__text {
-    font-size: 13px; } }
-
-.menu__line {
-  width: 100%;
-  height: 6px;
-  background: #2B60AF;
-  position: relative;
-  margin: 10px auto; }
+    height: 90px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-top: 30px; }
+    @media (max-width: 1600px) {
+      .menu__text {
+        font-size: 13px; } }
+  .menu__line {
+    width: 100%;
+    height: 6px;
+    background: #2B60AF;
+    position: relative;
+    margin: 10px auto; }
